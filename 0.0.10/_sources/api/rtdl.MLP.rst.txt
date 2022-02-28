@@ -1,0 +1,7 @@
+﻿rtdl.MLP
+========
+
+.. currentmodule:: rtdl
+
+.. autoclass:: MLP
+   :members:

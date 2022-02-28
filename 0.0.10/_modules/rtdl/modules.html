@@ -1,0 +1,1819 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>rtdl.modules &#8212; rtdl 0.0.10 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/material.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=red data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#_modules/rtdl/modules" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="rtdl 0.0.10 documentation"
+           class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">&#127968;</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">rtdl 0.0.10</span>
+          <span class="md-header-nav__topic"> rtdl.modules </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            <a href="https://github.com/yandex-research/rtdl" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    rtdl
+  </div>
+</a>
+          </div>
+        </div>
+      
+      
+  
+  <script src="../../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../../_static/versions.json",
+        target_loc = "../../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Module code</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="rtdl 0.0.10 documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">&#127968;</i>
+      
+    </a>
+    <a href="../../index.html"
+       title="rtdl 0.0.10 documentation">rtdl 0.0.10</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/yandex-research/rtdl" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    rtdl
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">API REFERENCE</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl.html" class="md-nav__link">rtdl</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl.html#activations" class="md-nav__link">Activations</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl.html#tokens-and-embeddings" class="md-nav__link">Tokens and Embeddings</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl.html#attention" class="md-nav__link">Attention</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl.html#models" class="md-nav__link">Models</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl.html#functions" class="md-nav__link">Functions</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl_data.html" class="md-nav__link">rtdl.data</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl_data.html#functions" class="md-nav__link">Functions</a>
+      
+    
+    </li></ul>
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <h1 id="modules-rtdl-modules--page-root">Source code for rtdl.modules</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">enum</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">import</span> <span class="nn">torch.optim</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">Tensor</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">functional</span> <span class="k">as</span> <span class="n">rtdlF</span>
+
+<span class="n">ModuleType</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">]]</span>
+<span class="n">_INTERNAL_ERROR_MESSAGE</span> <span class="o">=</span> <span class="s1">'Internal error. Please, open an issue.'</span>
+
+
+<span class="k">def</span> <span class="nf">_is_glu_activation</span><span class="p">(</span><span class="n">activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">activation</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="n">activation</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">'GLU'</span><span class="p">)</span>
+        <span class="ow">or</span> <span class="n">activation</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ReGLU</span><span class="p">,</span> <span class="n">GEGLU</span><span class="p">]</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_all_or_none</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="ReGLU"><a class="viewcode-back" href="../../api/rtdl.ReGLU.html#rtdl.ReGLU">[docs]</a><span class="k">class</span> <span class="nc">ReGLU</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""The ReGLU activation function from [shazeer2020glu].</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            module = ReGLU()</span>
+<span class="sd">            x = torch.randn(3, 4)</span>
+<span class="sd">            assert module(x).shape == (3, 2)</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        * [shazeer2020glu] Noam Shazeer, "GLU Variants Improve Transformer", 2020</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rtdlF</span><span class="o">.</span><span class="n">reglu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="GEGLU"><a class="viewcode-back" href="../../api/rtdl.GEGLU.html#rtdl.GEGLU">[docs]</a><span class="k">class</span> <span class="nc">GEGLU</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""The GEGLU activation function from [shazeer2020glu].</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            module = GEGLU()</span>
+<span class="sd">            x = torch.randn(3, 4)</span>
+<span class="sd">            assert module(x).shape == (3, 2)</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        * [shazeer2020glu] Noam Shazeer, "GLU Variants Improve Transformer", 2020</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rtdlF</span><span class="o">.</span><span class="n">geglu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_TokenInitialization</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">UNIFORM</span> <span class="o">=</span> <span class="s1">'uniform'</span>
+    <span class="n">NORMAL</span> <span class="o">=</span> <span class="s1">'normal'</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_str</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">initialization</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'_TokenInitialization'</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">initialization</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">valid_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">_TokenInitialization</span><span class="p">]</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">'initialization must be one of </span><span class="si">{</span><span class="n">valid_values</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">d_sqrt_inv</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">_TokenInitialization</span><span class="o">.</span><span class="n">UNIFORM</span><span class="p">:</span>
+            <span class="c1"># used in the paper "Revisiting Deep Learning Models for Tabular Data";</span>
+            <span class="c1"># is equivalent to `nn.init.kaiming_uniform_(x, a=math.sqrt(5))` (which is</span>
+            <span class="c1"># used by torch to initialize nn.Linear.weight, for example)</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">uniform_</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="o">=-</span><span class="n">d_sqrt_inv</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">d_sqrt_inv</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">_TokenInitialization</span><span class="o">.</span><span class="n">NORMAL</span><span class="p">:</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">normal_</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="n">d_sqrt_inv</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="NumericalFeatureTokenizer"><a class="viewcode-back" href="../../api/rtdl.NumericalFeatureTokenizer.html#rtdl.NumericalFeatureTokenizer">[docs]</a><span class="k">class</span> <span class="nc">NumericalFeatureTokenizer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""Transforms continuous features to tokens (embeddings).</span>
+
+<span class="sd">    See `FeatureTokenizer` for the illustration.</span>
+
+<span class="sd">    For one feature, the transformation consists of two steps:</span>
+
+<span class="sd">    * the feature is multiplied by a trainable vector</span>
+<span class="sd">    * another trainable vector is added</span>
+
+<span class="sd">    Note that each feature has its separate pair of trainable vectors, i.e. the vectors</span>
+<span class="sd">    are not shared between features.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            x = torch.randn(4, 2)</span>
+<span class="sd">            n_objects, n_features = x.shape</span>
+<span class="sd">            d_token = 3</span>
+<span class="sd">            tokenizer = NumericalFeatureTokenizer(n_features, d_token, True, 'uniform')</span>
+<span class="sd">            tokens = tokenizer(x)</span>
+<span class="sd">            assert tokens.shape == (n_objects, n_features, d_token)</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">n_features</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">d_token</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">bias</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">initialization</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Args:</span>
+<span class="sd">            n_features: the number of continuous (scalar) features</span>
+<span class="sd">            d_token: the size of one token</span>
+<span class="sd">            bias: if `False`, then the transformation will include only multiplication.</span>
+<span class="sd">                **Warning**: :code:`bias=False` leads to significantly worse results for</span>
+<span class="sd">                Transformer-like (token-based) architectures.</span>
+<span class="sd">            initialization: initialization policy for parameters. Must be one of</span>
+<span class="sd">                :code:`['uniform', 'normal']`. Let :code:`s = d ** -0.5`. Then, the</span>
+<span class="sd">                corresponding distributions are :code:`Uniform(-s, s)` and :code:`Normal(0, s)`.</span>
+<span class="sd">                In [gorishniy2021revisiting], the 'uniform' initialization was used.</span>
+
+<span class="sd">        References:</span>
+<span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">initialization_</span> <span class="o">=</span> <span class="n">_TokenInitialization</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="n">initialization</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">Tensor</span><span class="p">(</span><span class="n">n_features</span><span class="p">,</span> <span class="n">d_token</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">Tensor</span><span class="p">(</span><span class="n">n_features</span><span class="p">,</span> <span class="n">d_token</span><span class="p">))</span> <span class="k">if</span> <span class="n">bias</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">initialization_</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="n">d_token</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">n_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""The number of tokens."""</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">d_token</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""The size of one token."""</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">x</span></div>
+
+
+<div class="viewcode-block" id="CategoricalFeatureTokenizer"><a class="viewcode-back" href="../../api/rtdl.CategoricalFeatureTokenizer.html#rtdl.CategoricalFeatureTokenizer">[docs]</a><span class="k">class</span> <span class="nc">CategoricalFeatureTokenizer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""Transforms categorical features to tokens (embeddings).</span>
+
+<span class="sd">    See `FeatureTokenizer` for the illustration.</span>
+
+<span class="sd">    The module efficiently implements a collection of `torch.nn.Embedding` (with</span>
+<span class="sd">    optional biases).</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            # the input must contain integers. For example, if the first feature can</span>
+<span class="sd">            # take 3 distinct values, then its cardinality is 3 and the first column</span>
+<span class="sd">            # must contain values from the range `[0, 1, 2]`.</span>
+<span class="sd">            cardinalities = [3, 10]</span>
+<span class="sd">            x = torch.tensor([</span>
+<span class="sd">                [0, 5],</span>
+<span class="sd">                [1, 7],</span>
+<span class="sd">                [0, 2],</span>
+<span class="sd">                [2, 4]</span>
+<span class="sd">            ])</span>
+<span class="sd">            n_objects, n_features = x.shape</span>
+<span class="sd">            d_token = 3</span>
+<span class="sd">            tokenizer = CategoricalFeatureTokenizer(cardinalities, d_token, True, 'uniform')</span>
+<span class="sd">            tokens = tokenizer(x)</span>
+<span class="sd">            assert tokens.shape == (n_objects, n_features, d_token)</span>
+<span class="sd">    """</span>
+
+    <span class="n">category_offsets</span><span class="p">:</span> <span class="n">Tensor</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">cardinalities</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">d_token</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">bias</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">initialization</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Args:</span>
+<span class="sd">            cardinalities: the number of distinct values for each feature. For example,</span>
+<span class="sd">                :code:`cardinalities=[3, 4]` describes two features: the first one can</span>
+<span class="sd">                take values in the range :code:`[0, 1, 2]` and the second one can take</span>
+<span class="sd">                values in the range :code:`[0, 1, 2, 3]`.</span>
+<span class="sd">            d_token: the size of one token.</span>
+<span class="sd">            bias: if `True`, for each feature, a trainable vector is added to the</span>
+<span class="sd">                embedding regardless of feature value. The bias vectors are not shared</span>
+<span class="sd">                between features.</span>
+<span class="sd">            initialization: initialization policy for parameters. Must be one of</span>
+<span class="sd">                :code:`['uniform', 'normal']`. Let :code:`s = d ** -0.5`. Then, the</span>
+<span class="sd">                corresponding distributions are :code:`Uniform(-s, s)` and :code:`Normal(0, s)`. In</span>
+<span class="sd">                the paper [gorishniy2021revisiting], the 'uniform' initialization was</span>
+<span class="sd">                used.</span>
+
+<span class="sd">        References:</span>
+<span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">cardinalities</span><span class="p">,</span> <span class="s1">'cardinalities must be non-empty'</span>
+        <span class="k">assert</span> <span class="n">d_token</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'d_token must be positive'</span>
+        <span class="n">initialization_</span> <span class="o">=</span> <span class="n">_TokenInitialization</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="n">initialization</span><span class="p">)</span>
+
+        <span class="n">category_offsets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">cardinalities</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_buffer</span><span class="p">(</span><span class="s1">'category_offsets'</span><span class="p">,</span> <span class="n">category_offsets</span><span class="p">,</span> <span class="n">persistent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">cardinalities</span><span class="p">),</span> <span class="n">d_token</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">Tensor</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cardinalities</span><span class="p">),</span> <span class="n">d_token</span><span class="p">))</span> <span class="k">if</span> <span class="n">bias</span> <span class="k">else</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">initialization_</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="n">d_token</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">n_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""The number of tokens."""</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">category_offsets</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">d_token</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""The size of one token."""</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span><span class="o">.</span><span class="n">embedding_dim</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embeddings</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">category_offsets</span><span class="p">[</span><span class="kc">None</span><span class="p">])</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">x</span></div>
+
+
+<div class="viewcode-block" id="FeatureTokenizer"><a class="viewcode-back" href="../../api/rtdl.FeatureTokenizer.html#rtdl.FeatureTokenizer">[docs]</a><span class="k">class</span> <span class="nc">FeatureTokenizer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""Combines `NumericalFeatureTokenizer` and `CategoricalFeatureTokenizer`.</span>
+
+<span class="sd">    The "Feature Tokenizer" module from [gorishniy2021revisiting]. The module transforms</span>
+<span class="sd">    continuous and categorical features to tokens (embeddings).</span>
+
+<span class="sd">    In the illustration below, the red module in the upper brackets represents</span>
+<span class="sd">    `NumericalFeatureTokenizer` and the green module in the lower brackets represents</span>
+<span class="sd">    `CategoricalFeatureTokenizer`.</span>
+
+<span class="sd">    .. image:: ../images/feature_tokenizer.png</span>
+<span class="sd">        :scale: 33%</span>
+<span class="sd">        :alt: Feature Tokenizer</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            n_objects = 4</span>
+<span class="sd">            n_num_features = 3</span>
+<span class="sd">            n_cat_features = 2</span>
+<span class="sd">            d_token = 7</span>
+<span class="sd">            x_num = torch.randn(n_objects, n_num_features)</span>
+<span class="sd">            x_cat = torch.tensor([[0, 1], [1, 0], [0, 2], [1, 1]])</span>
+<span class="sd">            # [2, 3] reflects cardinalities fr</span>
+<span class="sd">            tokenizer = FeatureTokenizer(n_num_features, [2, 3], d_token)</span>
+<span class="sd">            tokens = tokenizer(x_num, x_cat)</span>
+<span class="sd">            assert tokens.shape == (n_objects, n_num_features + n_cat_features, d_token)</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">n_num_features</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">cat_cardinalities</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">d_token</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Args:</span>
+<span class="sd">            n_num_features: the number of continuous features. Pass :code:`0` if there</span>
+<span class="sd">                are no numerical features.</span>
+<span class="sd">            cat_cardinalities: the number of unique values for each feature. See</span>
+<span class="sd">                `CategoricalFeatureTokenizer` for details. Pass an empty list if there</span>
+<span class="sd">                are no categorical features.</span>
+<span class="sd">            d_token: the size of one token.</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">n_num_features</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'n_num_features must be non-negative'</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">n_num_features</span> <span class="ow">or</span> <span class="n">cat_cardinalities</span>
+        <span class="p">),</span> <span class="s1">'at least one of n_num_features or cat_cardinalities must be positive/non-empty'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initialization</span> <span class="o">=</span> <span class="s1">'uniform'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">NumericalFeatureTokenizer</span><span class="p">(</span>
+                <span class="n">n_features</span><span class="o">=</span><span class="n">n_num_features</span><span class="p">,</span>
+                <span class="n">d_token</span><span class="o">=</span><span class="n">d_token</span><span class="p">,</span>
+                <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">initialization</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">initialization</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">n_num_features</span>
+            <span class="k">else</span> <span class="kc">None</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cat_tokenizer</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">CategoricalFeatureTokenizer</span><span class="p">(</span>
+                <span class="n">cat_cardinalities</span><span class="p">,</span> <span class="n">d_token</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialization</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">cat_cardinalities</span>
+            <span class="k">else</span> <span class="kc">None</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">n_tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""The number of tokens."""</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">n_tokens</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_tokenizer</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">d_token</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""The size of one token."""</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cat_tokenizer</span><span class="o">.</span><span class="n">d_token</span>  <span class="c1"># type: ignore</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span> <span class="ow">is</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span><span class="o">.</span><span class="n">d_token</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="FeatureTokenizer.forward"><a class="viewcode-back" href="../../api/rtdl.FeatureTokenizer.html#rtdl.FeatureTokenizer.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_num</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">x_cat</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="sd">"""Perform the forward pass.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x_num: continuous features. Must be presented if :code:`n_num_features &gt; 0`</span>
+<span class="sd">                was passed to the constructor.</span>
+<span class="sd">            x_cat: categorical features (see `CategoricalFeatureTokenizer.forward` for</span>
+<span class="sd">                details). Must be presented if non-empty :code:`cat_cardinalities` was</span>
+<span class="sd">                passed to the constructor.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            tokens</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            AssertionError: if the described requirements for the inputs are not met.</span>
+<span class="sd">        """</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">x_num</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">x_cat</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">),</span> <span class="s1">'At least one of x_num and x_cat must be presented'</span>
+        <span class="k">assert</span> <span class="n">_all_or_none</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span><span class="p">,</span> <span class="n">x_num</span><span class="p">]</span>
+        <span class="p">),</span> <span class="s1">'If self.num_tokenizer is (not) None, then x_num must (not) be None'</span>
+        <span class="k">assert</span> <span class="n">_all_or_none</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">cat_tokenizer</span><span class="p">,</span> <span class="n">x_cat</span><span class="p">]</span>
+        <span class="p">),</span> <span class="s1">'If self.cat_tokenizer is (not) None, then x_cat must (not) be None'</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span><span class="p">(</span><span class="n">x_num</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_tokenizer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cat_tokenizer</span><span class="p">(</span><span class="n">x_cat</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="CLSToken"><a class="viewcode-back" href="../../api/rtdl.CLSToken.html#rtdl.CLSToken">[docs]</a><span class="k">class</span> <span class="nc">CLSToken</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""[CLS]-token for BERT-like inference.</span>
+
+<span class="sd">    To learn about the [CLS]-based inference, see [devlin2018bert].</span>
+
+<span class="sd">    When used as a module, the [CLS]-token is appended **to the end** of each item in</span>
+<span class="sd">    the batch.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            batch_size = 2</span>
+<span class="sd">            n_tokens = 3</span>
+<span class="sd">            d_token = 4</span>
+<span class="sd">            cls_token = CLSToken(d_token, 'uniform')</span>
+<span class="sd">            x = torch.randn(batch_size, n_tokens, d_token)</span>
+<span class="sd">            x = cls_token(x)</span>
+<span class="sd">            assert x.shape == (batch_size, n_tokens + 1, d_token)</span>
+<span class="sd">            assert (x[:, -1, :] == cls_token.expand(len(x))).all()</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        * [devlin2018bert] Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" 2018</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d_token</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">initialization</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Args:</span>
+<span class="sd">            d_token: the size of token</span>
+<span class="sd">            initialization: initialization policy for parameters. Must be one of</span>
+<span class="sd">                :code:`['uniform', 'normal']`. Let :code:`s = d ** -0.5`. Then, the</span>
+<span class="sd">                corresponding distributions are :code:`Uniform(-s, s)` and :code:`Normal(0, s)`. In</span>
+<span class="sd">                the paper [gorishniy2021revisiting], the 'uniform' initialization was</span>
+<span class="sd">                used.</span>
+
+<span class="sd">        References:</span>
+<span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">initialization_</span> <span class="o">=</span> <span class="n">_TokenInitialization</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="n">initialization</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">Tensor</span><span class="p">(</span><span class="n">d_token</span><span class="p">))</span>
+        <span class="n">initialization_</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">d_token</span><span class="p">)</span>
+
+<div class="viewcode-block" id="CLSToken.expand"><a class="viewcode-back" href="../../api/rtdl.CLSToken.html#rtdl.CLSToken.expand">[docs]</a>    <span class="k">def</span> <span class="nf">expand</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">leading_dimensions</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="sd">"""Expand (repeat) the underlying [CLS]-token to a tensor with the given leading dimensions.</span>
+
+<span class="sd">        A possible use case is building a batch of [CLS]-tokens. See `CLSToken` for</span>
+<span class="sd">        examples of usage.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Under the hood, the `torch.Tensor.expand` method is applied to the</span>
+<span class="sd">            underlying :code:`weight` parameter, so gradients will be propagated as</span>
+<span class="sd">            expected.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            leading_dimensions: the additional new dimensions</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tensor of the shape :code:`(*leading_dimensions, len(self.weight))`</span>
+<span class="sd">        """</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">leading_dimensions</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span>
+        <span class="n">new_dims</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">leading_dimensions</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">*</span><span class="n">new_dims</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="o">*</span><span class="n">leading_dimensions</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CLSToken.forward"><a class="viewcode-back" href="../../api/rtdl.CLSToken.html#rtdl.CLSToken.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="sd">"""Append self **to the end** of each item in the batch (see `CLSToken`)."""</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_make_nn_module</span><span class="p">(</span><span class="n">module_type</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">module_type</span> <span class="o">==</span> <span class="s1">'ReGLU'</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ReGLU</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">module_type</span> <span class="o">==</span> <span class="s1">'GEGLU'</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">GEGLU</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">cls</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">nn</span><span class="p">,</span> <span class="n">module_type</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">'Failed to construct the module </span><span class="si">{</span><span class="n">module_type</span><span class="si">}</span><span class="s1"> with the arguments </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s1">'</span>
+                <span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">module_type</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="MLP"><a class="viewcode-back" href="../../api/rtdl.MLP.html#rtdl.MLP">[docs]</a><span class="k">class</span> <span class="nc">MLP</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""The MLP model used in [gorishniy2021revisiting].</span>
+
+<span class="sd">    The following scheme describes the architecture:</span>
+
+<span class="sd">    .. code-block:: text</span>
+
+<span class="sd">          MLP: (in) -&gt; Block -&gt; ... -&gt; Block -&gt; Linear -&gt; (out)</span>
+<span class="sd">        Block: (in) -&gt; Linear -&gt; Activation -&gt; Dropout -&gt; (out)</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            x = torch.randn(4, 2)</span>
+<span class="sd">            module = MLP.make_baseline(x.shape[1], [3, 5], 0.1, 1)</span>
+<span class="sd">            assert module(x).shape == (len(x), 1)</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">    """</span>
+
+<div class="viewcode-block" id="MLP.Block"><a class="viewcode-back" href="../../api/rtdl.MLP.html#rtdl.MLP.Block">[docs]</a>    <span class="k">class</span> <span class="nc">Block</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+        <span class="sd">"""The main building block of `MLP`."""</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span>
+            <span class="n">d_in</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">bias</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+            <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">activation</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">activation</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">activation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">d_in</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">d_layers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">dropouts</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
+        <span class="n">activation</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">]],</span>
+        <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Note:</span>
+<span class="sd">            `make_baseline` is the recommended constructor.</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dropouts</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="n">dropouts</span> <span class="o">=</span> <span class="p">[</span><span class="n">dropouts</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_layers</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_layers</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">dropouts</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="o">*</span><span class="p">[</span>
+                <span class="n">MLP</span><span class="o">.</span><span class="n">Block</span><span class="p">(</span>
+                    <span class="n">d_in</span><span class="o">=</span><span class="n">d_layers</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="k">else</span> <span class="n">d_in</span><span class="p">,</span>
+                    <span class="n">d_out</span><span class="o">=</span><span class="n">d</span><span class="p">,</span>
+                    <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">activation</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span>
+                    <span class="n">dropout</span><span class="o">=</span><span class="n">dropout</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">d_layers</span><span class="p">,</span> <span class="n">dropouts</span><span class="p">))</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">d_layers</span> <span class="k">else</span> <span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MLP.make_baseline"><a class="viewcode-back" href="../../api/rtdl.MLP.html#rtdl.MLP.make_baseline">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">make_baseline</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s1">'MLP'</span><span class="p">],</span>
+        <span class="n">d_in</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">d_layers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'MLP'</span><span class="p">:</span>
+        <span class="sd">"""Create a "baseline" `MLP`.</span>
+
+<span class="sd">        This variation of MLP was used in [gorishniy2021revisiting]. Features:</span>
+
+<span class="sd">        * :code:`Activation` = :code:`ReLU`</span>
+<span class="sd">        * all linear layers except for the first one and the last one are of the same dimension</span>
+<span class="sd">        * the dropout rate is the same for all dropout layers</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            d_in: the input size</span>
+<span class="sd">            d_layers: the dimensions of the linear layers. If there are more than two</span>
+<span class="sd">                layers, then all of them except for the first and the last ones must</span>
+<span class="sd">                have the same dimension. Valid examples: :code:`[]`, :code:`[8]`,</span>
+<span class="sd">                :code:`[8, 16]`, :code:`[2, 2, 2, 2]`, :code:`[1, 2, 2, 4]`. Invalid</span>
+<span class="sd">                example: :code:`[1, 2, 3, 4]`.</span>
+<span class="sd">            dropout: the dropout rate for all hidden layers</span>
+<span class="sd">            d_out: the output size</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            MLP</span>
+
+<span class="sd">        References:</span>
+<span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">        """</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dropout</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span> <span class="s1">'In this constructor, dropout must be float'</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_layers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">d_layers</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span>
+                <span class="s1">'In this constructor, if d_layers contains more than two elements, then'</span>
+                <span class="s1">' all elements except for the first and the last ones must be equal.'</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">MLP</span><span class="p">(</span>
+            <span class="n">d_in</span><span class="o">=</span><span class="n">d_in</span><span class="p">,</span>
+            <span class="n">d_layers</span><span class="o">=</span><span class="n">d_layers</span><span class="p">,</span>  <span class="c1"># type: ignore</span>
+            <span class="n">dropouts</span><span class="o">=</span><span class="n">dropout</span><span class="p">,</span>
+            <span class="n">activation</span><span class="o">=</span><span class="s1">'ReLU'</span><span class="p">,</span>
+            <span class="n">d_out</span><span class="o">=</span><span class="n">d_out</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span></div>
+
+
+<div class="viewcode-block" id="ResNet"><a class="viewcode-back" href="../../api/rtdl.ResNet.html#rtdl.ResNet">[docs]</a><span class="k">class</span> <span class="nc">ResNet</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""The ResNet model used in [gorishniy2021revisiting].</span>
+
+<span class="sd">    The following scheme describes the architecture:</span>
+
+<span class="sd">    .. code-block:: text</span>
+
+<span class="sd">        ResNet: (in) -&gt; Linear -&gt; Block -&gt; ... -&gt; Block -&gt; Head -&gt; (out)</span>
+
+<span class="sd">                 |-&gt; Norm -&gt; Linear -&gt; Activation -&gt; Dropout -&gt; Linear -&gt; Dropout -&gt;|</span>
+<span class="sd">                 |                                                                  |</span>
+<span class="sd">         Block: (in) ------------------------------------------------------------&gt; Add -&gt; (out)</span>
+
+<span class="sd">          Head: (in) -&gt; Norm -&gt; Activation -&gt; Linear -&gt; (out)</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            x = torch.randn(4, 2)</span>
+<span class="sd">            module = ResNet.make_baseline(</span>
+<span class="sd">                d_in=x.shape[1],</span>
+<span class="sd">                n_blocks=2,</span>
+<span class="sd">                d_main=3,</span>
+<span class="sd">                d_hidden=4,</span>
+<span class="sd">                dropout_first=0.25,</span>
+<span class="sd">                dropout_second=0.0,</span>
+<span class="sd">                d_out=1</span>
+<span class="sd">            )</span>
+<span class="sd">            assert module(x).shape == (len(x), 1)</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">    """</span>
+
+<div class="viewcode-block" id="ResNet.Block"><a class="viewcode-back" href="../../api/rtdl.ResNet.html#rtdl.ResNet.Block">[docs]</a>    <span class="k">class</span> <span class="nc">Block</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+        <span class="sd">"""The main building block of `ResNet`."""</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span>
+            <span class="n">d_main</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">d_hidden</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">bias_first</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">bias_second</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">dropout_first</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+            <span class="n">dropout_second</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+            <span class="n">normalization</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+            <span class="n">activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+            <span class="n">skip_connection</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">normalization</span><span class="p">,</span> <span class="n">d_main</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">linear_first</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_main</span><span class="p">,</span> <span class="n">d_hidden</span><span class="p">,</span> <span class="n">bias_first</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">activation</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">activation</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dropout_first</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout_first</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">linear_second</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_hidden</span><span class="p">,</span> <span class="n">d_main</span><span class="p">,</span> <span class="n">bias_second</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dropout_second</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout_second</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">skip_connection</span> <span class="o">=</span> <span class="n">skip_connection</span>
+
+        <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+            <span class="n">x_input</span> <span class="o">=</span> <span class="n">x</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear_first</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout_first</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear_second</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout_second</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">skip_connection</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">x_input</span> <span class="o">+</span> <span class="n">x</span>
+            <span class="k">return</span> <span class="n">x</span></div>
+
+<div class="viewcode-block" id="ResNet.Head"><a class="viewcode-back" href="../../api/rtdl.ResNet.html#rtdl.ResNet.Head">[docs]</a>    <span class="k">class</span> <span class="nc">Head</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+        <span class="sd">"""The final module of `ResNet`."""</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span>
+            <span class="n">d_in</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">bias</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">normalization</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+            <span class="n">activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">normalization</span><span class="p">,</span> <span class="n">d_in</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">activation</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">activation</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">x</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">d_in</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">n_blocks</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">d_main</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">d_hidden</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">dropout_first</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">dropout_second</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">normalization</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+        <span class="n">activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+        <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Note:</span>
+<span class="sd">            `make_baseline` is the recommended constructor.</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_in</span><span class="p">,</span> <span class="n">d_main</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">d_main</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">d_main</span> <span class="o">=</span> <span class="n">d_in</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="o">*</span><span class="p">[</span>
+                <span class="n">ResNet</span><span class="o">.</span><span class="n">Block</span><span class="p">(</span>
+                    <span class="n">d_main</span><span class="o">=</span><span class="n">d_main</span><span class="p">,</span>
+                    <span class="n">d_hidden</span><span class="o">=</span><span class="n">d_hidden</span><span class="p">,</span>
+                    <span class="n">bias_first</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">bias_second</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">dropout_first</span><span class="o">=</span><span class="n">dropout_first</span><span class="p">,</span>
+                    <span class="n">dropout_second</span><span class="o">=</span><span class="n">dropout_second</span><span class="p">,</span>
+                    <span class="n">normalization</span><span class="o">=</span><span class="n">normalization</span><span class="p">,</span>
+                    <span class="n">activation</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span>
+                    <span class="n">skip_connection</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_blocks</span><span class="p">)</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">ResNet</span><span class="o">.</span><span class="n">Head</span><span class="p">(</span>
+            <span class="n">d_in</span><span class="o">=</span><span class="n">d_main</span><span class="p">,</span>
+            <span class="n">d_out</span><span class="o">=</span><span class="n">d_out</span><span class="p">,</span>
+            <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">normalization</span><span class="o">=</span><span class="n">normalization</span><span class="p">,</span>
+            <span class="n">activation</span><span class="o">=</span><span class="n">activation</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="ResNet.make_baseline"><a class="viewcode-back" href="../../api/rtdl.ResNet.html#rtdl.ResNet.make_baseline">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">make_baseline</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s1">'ResNet'</span><span class="p">],</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">d_in</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">n_blocks</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">d_main</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">d_hidden</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">dropout_first</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">dropout_second</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'ResNet'</span><span class="p">:</span>
+        <span class="sd">"""Create a "baseline" `ResNet`.</span>
+
+<span class="sd">        This variation of ResNet was used in [gorishniy2021revisiting]. Features:</span>
+
+<span class="sd">        * :code:`Activation` = :code:`ReLU`</span>
+<span class="sd">        * :code:`Norm` = :code:`BatchNorm1d`</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            d_in: the input size</span>
+<span class="sd">            n_blocks: the number of Blocks</span>
+<span class="sd">            d_main: the input size (or, equivalently, the output size) of each Block</span>
+<span class="sd">            d_hidden: the output size of the first linear layer in each Block</span>
+<span class="sd">            dropout_first: the dropout rate of the first dropout layer in each Block.</span>
+<span class="sd">            dropout_second: the dropout rate of the second dropout layer in each Block.</span>
+
+<span class="sd">        References:</span>
+<span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">d_in</span><span class="o">=</span><span class="n">d_in</span><span class="p">,</span>
+            <span class="n">n_blocks</span><span class="o">=</span><span class="n">n_blocks</span><span class="p">,</span>
+            <span class="n">d_main</span><span class="o">=</span><span class="n">d_main</span><span class="p">,</span>
+            <span class="n">d_hidden</span><span class="o">=</span><span class="n">d_hidden</span><span class="p">,</span>
+            <span class="n">dropout_first</span><span class="o">=</span><span class="n">dropout_first</span><span class="p">,</span>
+            <span class="n">dropout_second</span><span class="o">=</span><span class="n">dropout_second</span><span class="p">,</span>
+            <span class="n">normalization</span><span class="o">=</span><span class="s1">'BatchNorm1d'</span><span class="p">,</span>
+            <span class="n">activation</span><span class="o">=</span><span class="s1">'ReLU'</span><span class="p">,</span>
+            <span class="n">d_out</span><span class="o">=</span><span class="n">d_out</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span></div>
+
+
+<div class="viewcode-block" id="MultiheadAttention"><a class="viewcode-back" href="../../api/rtdl.MultiheadAttention.html#rtdl.MultiheadAttention">[docs]</a><span class="k">class</span> <span class="nc">MultiheadAttention</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""Multihead Attention (self-/cross-) with optional 'linear' attention.</span>
+
+<span class="sd">    To learn more about Multihead Attention, see [devlin2018bert]. See the implementation</span>
+<span class="sd">    of `Transformer` and the examples below to learn how to use the compression technique</span>
+<span class="sd">    from [wang2020linformer] to speed up the module when the number of tokens is large.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            n_objects, n_tokens, d_token = 2, 3, 12</span>
+<span class="sd">            n_heads = 6</span>
+<span class="sd">            a = torch.randn(n_objects, n_tokens, d_token)</span>
+<span class="sd">            b = torch.randn(n_objects, n_tokens * 2, d_token)</span>
+<span class="sd">            module = MultiheadAttention(</span>
+<span class="sd">                d_token=d_token, n_heads=n_heads, dropout=0.2, bias=True, initialization='kaiming'</span>
+<span class="sd">            )</span>
+
+<span class="sd">            # self-attention</span>
+<span class="sd">            x, attention_stats = module(a, a, None, None)</span>
+<span class="sd">            assert x.shape == a.shape</span>
+<span class="sd">            assert attention_stats['attention_probs'].shape == (n_objects * n_heads, n_tokens, n_tokens)</span>
+<span class="sd">            assert attention_stats['attention_logits'].shape == (n_objects * n_heads, n_tokens, n_tokens)</span>
+
+<span class="sd">            # cross-attention</span>
+<span class="sd">            assert module(a, b, None, None)</span>
+
+<span class="sd">            # Linformer self-attention with the 'headwise' sharing policy</span>
+<span class="sd">            k_compression = torch.nn.Linear(n_tokens, n_tokens // 4)</span>
+<span class="sd">            v_compression = torch.nn.Linear(n_tokens, n_tokens // 4)</span>
+<span class="sd">            assert module(a, a, k_compression, v_compression)</span>
+
+<span class="sd">            # Linformer self-attention with the 'key-value' sharing policy</span>
+<span class="sd">            kv_compression = torch.nn.Linear(n_tokens, n_tokens // 4)</span>
+<span class="sd">            assert module(a, a, kv_compression, kv_compression)</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        * [devlin2018bert] Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding" 2018</span>
+<span class="sd">        * [wang2020linformer] Sinong Wang, Belinda Z. Li, Madian Khabsa, Han Fang, Hao Ma "Linformer: Self-Attention with Linear Complexity", 2020</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">d_token</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">n_heads</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">bias</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">initialization</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Args:</span>
+<span class="sd">            d_token: the token size. Must be a multiple of :code:`n_heads`.</span>
+<span class="sd">            n_heads: the number of heads. If greater than 1, then the module will have</span>
+<span class="sd">                an addition output layer (so called "mixing" layer).</span>
+<span class="sd">            dropout: dropout rate for the attention map. The dropout is applied to</span>
+<span class="sd">                *probabilities* and do not affect logits.</span>
+<span class="sd">            bias: if `True`, then input (and output, if presented) layers also have bias.</span>
+<span class="sd">                `True` is a reasonable default choice.</span>
+<span class="sd">            initialization: initialization for input projection layers. Must be one of</span>
+<span class="sd">                :code:`['kaiming', 'xavier']`. `kaiming` is a reasonable default choice.</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            AssertionError: if requirements for the inputs are not met.</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">n_heads</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">d_token</span> <span class="o">%</span> <span class="n">n_heads</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'d_token must be a multiple of n_heads'</span>
+        <span class="k">assert</span> <span class="n">initialization</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'kaiming'</span><span class="p">,</span> <span class="s1">'xavier'</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">W_q</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_token</span><span class="p">,</span> <span class="n">d_token</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">W_k</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_token</span><span class="p">,</span> <span class="n">d_token</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">W_v</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_token</span><span class="p">,</span> <span class="n">d_token</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">W_out</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_token</span><span class="p">,</span> <span class="n">d_token</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span> <span class="k">if</span> <span class="n">n_heads</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span> <span class="o">=</span> <span class="n">n_heads</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span> <span class="k">if</span> <span class="n">dropout</span> <span class="k">else</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">W_q</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_v</span><span class="p">]:</span>
+            <span class="c1"># the "xavier" branch tries to follow torch.nn.MultiheadAttention;</span>
+            <span class="c1"># the second condition checks if W_v plays the role of W_out; the latter one</span>
+            <span class="c1"># is initialized with Kaiming in torch</span>
+            <span class="k">if</span> <span class="n">initialization</span> <span class="o">==</span> <span class="s1">'xavier'</span> <span class="ow">and</span> <span class="p">(</span>
+                <span class="n">m</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_v</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_out</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="p">):</span>
+                <span class="c1"># gain is needed since W_qkv is represented with 3 separate layers (it</span>
+                <span class="c1"># implies different fan_out)</span>
+                <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">xavier_uniform_</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mi">1</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">zeros_</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">bias</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_out</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">zeros_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">W_out</span><span class="o">.</span><span class="n">bias</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_reshape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">batch_size</span><span class="p">,</span> <span class="n">n_tokens</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">d_head</span> <span class="o">=</span> <span class="n">d</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">n_tokens</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">d_head</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">batch_size</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">n_tokens</span><span class="p">,</span> <span class="n">d_head</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="MultiheadAttention.forward"><a class="viewcode-back" href="../../api/rtdl.MultiheadAttention.html#rtdl.MultiheadAttention.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">x_q</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
+        <span class="n">x_kv</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
+        <span class="n">key_compression</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">],</span>
+        <span class="n">value_compression</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">]]:</span>
+        <span class="sd">"""Perform the forward pass.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x_q: query tokens</span>
+<span class="sd">            x_kv: key-value tokens</span>
+<span class="sd">            key_compression: Linformer-style compression for keys</span>
+<span class="sd">            value_compression: Linformer-style compression for values</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            (tokens, attention_stats)</span>
+<span class="sd">        """</span>
+        <span class="k">assert</span> <span class="n">_all_or_none</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">key_compression</span><span class="p">,</span> <span class="n">value_compression</span><span class="p">]</span>
+        <span class="p">),</span> <span class="s1">'If key_compression is (not) None, then value_compression must (not) be None'</span>
+        <span class="n">q</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_q</span><span class="p">(</span><span class="n">x_q</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_k</span><span class="p">(</span><span class="n">x_kv</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_v</span><span class="p">(</span><span class="n">x_kv</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">tensor</span> <span class="ow">in</span> <span class="p">[</span><span class="n">q</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">]:</span>
+            <span class="k">assert</span> <span class="n">tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
+        <span class="k">if</span> <span class="n">key_compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">key_compression</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">value_compression</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+
+        <span class="n">batch_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+        <span class="n">d_head_key</span> <span class="o">=</span> <span class="n">k</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span>
+        <span class="n">d_head_value</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span>
+        <span class="n">n_q_tokens</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reshape</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reshape</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">attention_logits</span> <span class="o">=</span> <span class="n">q</span> <span class="o">@</span> <span class="n">k</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_head_key</span><span class="p">)</span>
+        <span class="n">attention_probs</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">attention_logits</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">attention_probs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">attention_probs</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">attention_probs</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reshape</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">n_q_tokens</span><span class="p">,</span> <span class="n">d_head_value</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">n_q_tokens</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span> <span class="o">*</span> <span class="n">d_head_value</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_out</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_out</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="p">{</span>
+            <span class="s1">'attention_logits'</span><span class="p">:</span> <span class="n">attention_logits</span><span class="p">,</span>
+            <span class="s1">'attention_probs'</span><span class="p">:</span> <span class="n">attention_probs</span><span class="p">,</span>
+        <span class="p">}</span></div></div>
+
+
+<div class="viewcode-block" id="Transformer"><a class="viewcode-back" href="../../api/rtdl.Transformer.html#rtdl.Transformer">[docs]</a><span class="k">class</span> <span class="nc">Transformer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""Transformer with extra features.</span>
+
+<span class="sd">    This module is the backbone of `FTTransformer`."""</span>
+
+    <span class="n">WARNINGS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'first_prenormalization'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'prenormalization'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+
+<div class="viewcode-block" id="Transformer.FFN"><a class="viewcode-back" href="../../api/rtdl.Transformer.html#rtdl.Transformer.FFN">[docs]</a>    <span class="k">class</span> <span class="nc">FFN</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+        <span class="sd">"""The Feed-Forward Network module used in every `Transformer` block."""</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span>
+            <span class="n">d_token</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">d_hidden</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">bias_first</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">bias_second</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+            <span class="n">activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+        <span class="p">):</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">linear_first</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span>
+                <span class="n">d_token</span><span class="p">,</span>
+                <span class="n">d_hidden</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="k">if</span> <span class="n">_is_glu_activation</span><span class="p">(</span><span class="n">activation</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span><span class="p">),</span>
+                <span class="n">bias_first</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">activation</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">activation</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">linear_second</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_hidden</span><span class="p">,</span> <span class="n">d_token</span><span class="p">,</span> <span class="n">bias_second</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear_first</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear_second</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">x</span></div>
+
+<div class="viewcode-block" id="Transformer.Head"><a class="viewcode-back" href="../../api/rtdl.Transformer.html#rtdl.Transformer.Head">[docs]</a>    <span class="k">class</span> <span class="nc">Head</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+        <span class="sd">"""The final module of the `Transformer` that performs BERT-like inference."""</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span>
+            <span class="n">d_in</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+            <span class="n">bias</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+            <span class="n">normalization</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+            <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="p">):</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">normalization</span><span class="p">,</span> <span class="n">d_in</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">activation</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">activation</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalization</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">x</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">d_token</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">n_blocks</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">attention_n_heads</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">attention_dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">attention_initialization</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">attention_normalization</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ffn_d_hidden</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">ffn_dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">ffn_activation</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ffn_normalization</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">residual_dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">prenormalization</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">first_prenormalization</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">last_layer_query_idx</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">slice</span><span class="p">],</span>
+        <span class="n">n_tokens</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">kv_compression_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+        <span class="n">kv_compression_sharing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">head_activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+        <span class="n">head_normalization</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span>
+        <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">last_layer_query_idx</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">'last_layer_query_idx must be None, list[int] or slice. '</span>
+                <span class="sa">f</span><span class="s1">'Do you mean last_layer_query_idx=[</span><span class="si">{</span><span class="n">last_layer_query_idx</span><span class="si">}</span><span class="s1">] ?'</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">prenormalization</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="ow">not</span> <span class="n">first_prenormalization</span>
+            <span class="p">),</span> <span class="s1">'If `prenormalization` is False, then `first_prenormalization` must be False'</span>
+        <span class="k">assert</span> <span class="n">_all_or_none</span><span class="p">([</span><span class="n">n_tokens</span><span class="p">,</span> <span class="n">kv_compression_ratio</span><span class="p">,</span> <span class="n">kv_compression_sharing</span><span class="p">]),</span> <span class="p">(</span>
+            <span class="s1">'If any of the following arguments is (not) None, then all of them must (not) be None: '</span>
+            <span class="s1">'n_tokens, kv_compression_ratio, kv_compression_sharing'</span>
+        <span class="p">)</span>
+        <span class="k">assert</span> <span class="n">kv_compression_sharing</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">'headwise'</span><span class="p">,</span> <span class="s1">'key-value'</span><span class="p">,</span> <span class="s1">'layerwise'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">prenormalization</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">WARNINGS</span><span class="p">[</span><span class="s1">'prenormalization'</span><span class="p">]:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s1">'prenormalization is set to False. Are you sure about this? '</span>
+                    <span class="s1">'The training can become less stable. '</span>
+                    <span class="s1">'You can turn off this warning by tweaking the '</span>
+                    <span class="s1">'rtdl.Transformer.WARNINGS dictionary.'</span><span class="p">,</span>
+                    <span class="ne">UserWarning</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="ow">not</span> <span class="n">first_prenormalization</span>
+            <span class="p">),</span> <span class="s1">'If prenormalization is False, then first_prenormalization is ignored and must be set to False'</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">prenormalization</span>
+            <span class="ow">and</span> <span class="n">first_prenormalization</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">WARNINGS</span><span class="p">[</span><span class="s1">'first_prenormalization'</span><span class="p">]</span>
+        <span class="p">):</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s1">'first_prenormalization is set to True. Are you sure about this? '</span>
+                <span class="s1">'For example, the vanilla FTTransformer with '</span>
+                <span class="s1">'first_prenormalization=True performs SIGNIFICANTLY worse. '</span>
+                <span class="s1">'You can turn off this warning by tweaking the '</span>
+                <span class="s1">'rtdl.Transformer.WARNINGS dictionary.'</span><span class="p">,</span>
+                <span class="ne">UserWarning</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">make_kv_compression</span><span class="p">():</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="n">n_tokens</span> <span class="ow">and</span> <span class="n">kv_compression_ratio</span>
+            <span class="p">),</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>  <span class="c1"># for mypy</span>
+            <span class="c1"># https://github.com/pytorch/fairseq/blob/1bba712622b8ae4efb3eb793a8a40da386fe11d0/examples/linformer/linformer_src/modules/multihead_linear_attention.py#L83</span>
+            <span class="k">return</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_tokens</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n_tokens</span> <span class="o">*</span> <span class="n">kv_compression_ratio</span><span class="p">),</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">shared_kv_compression</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">make_kv_compression</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">kv_compression_ratio</span> <span class="ow">and</span> <span class="n">kv_compression_sharing</span> <span class="o">==</span> <span class="s1">'layerwise'</span>
+            <span class="k">else</span> <span class="kc">None</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">prenormalization</span> <span class="o">=</span> <span class="n">prenormalization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_layer_query_idx</span> <span class="o">=</span> <span class="n">last_layer_query_idx</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleList</span><span class="p">([])</span>
+        <span class="k">for</span> <span class="n">layer_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_blocks</span><span class="p">):</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ModuleDict</span><span class="p">(</span>
+                <span class="p">{</span>
+                    <span class="s1">'attention'</span><span class="p">:</span> <span class="n">MultiheadAttention</span><span class="p">(</span>
+                        <span class="n">d_token</span><span class="o">=</span><span class="n">d_token</span><span class="p">,</span>
+                        <span class="n">n_heads</span><span class="o">=</span><span class="n">attention_n_heads</span><span class="p">,</span>
+                        <span class="n">dropout</span><span class="o">=</span><span class="n">attention_dropout</span><span class="p">,</span>
+                        <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">initialization</span><span class="o">=</span><span class="n">attention_initialization</span><span class="p">,</span>
+                    <span class="p">),</span>
+                    <span class="s1">'ffn'</span><span class="p">:</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">FFN</span><span class="p">(</span>
+                        <span class="n">d_token</span><span class="o">=</span><span class="n">d_token</span><span class="p">,</span>
+                        <span class="n">d_hidden</span><span class="o">=</span><span class="n">ffn_d_hidden</span><span class="p">,</span>
+                        <span class="n">bias_first</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">bias_second</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">dropout</span><span class="o">=</span><span class="n">ffn_dropout</span><span class="p">,</span>
+                        <span class="n">activation</span><span class="o">=</span><span class="n">ffn_activation</span><span class="p">,</span>
+                    <span class="p">),</span>
+                    <span class="s1">'attention_residual_dropout'</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">residual_dropout</span><span class="p">),</span>
+                    <span class="s1">'ffn_residual_dropout'</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">residual_dropout</span><span class="p">),</span>
+                    <span class="s1">'output'</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Identity</span><span class="p">(),</span>  <span class="c1"># for hooks-based introspection</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">layer_idx</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">prenormalization</span> <span class="ow">or</span> <span class="n">first_prenormalization</span><span class="p">:</span>
+                <span class="n">layer</span><span class="p">[</span><span class="s1">'attention_normalization'</span><span class="p">]</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span>
+                    <span class="n">attention_normalization</span><span class="p">,</span> <span class="n">d_token</span>
+                <span class="p">)</span>
+            <span class="n">layer</span><span class="p">[</span><span class="s1">'ffn_normalization'</span><span class="p">]</span> <span class="o">=</span> <span class="n">_make_nn_module</span><span class="p">(</span><span class="n">ffn_normalization</span><span class="p">,</span> <span class="n">d_token</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">kv_compression_ratio</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">shared_kv_compression</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">layer</span><span class="p">[</span><span class="s1">'key_compression'</span><span class="p">]</span> <span class="o">=</span> <span class="n">make_kv_compression</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">kv_compression_sharing</span> <span class="o">==</span> <span class="s1">'headwise'</span><span class="p">:</span>
+                    <span class="n">layer</span><span class="p">[</span><span class="s1">'value_compression'</span><span class="p">]</span> <span class="o">=</span> <span class="n">make_kv_compression</span><span class="p">()</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">assert</span> <span class="p">(</span>
+                        <span class="n">kv_compression_sharing</span> <span class="o">==</span> <span class="s1">'key-value'</span>
+                    <span class="p">),</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">Head</span><span class="p">(</span>
+            <span class="n">d_in</span><span class="o">=</span><span class="n">d_token</span><span class="p">,</span>
+            <span class="n">d_out</span><span class="o">=</span><span class="n">d_out</span><span class="p">,</span>
+            <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">activation</span><span class="o">=</span><span class="n">head_activation</span><span class="p">,</span>  <span class="c1"># type: ignore</span>
+            <span class="n">normalization</span><span class="o">=</span><span class="n">head_normalization</span> <span class="k">if</span> <span class="n">prenormalization</span> <span class="k">else</span> <span class="s1">'Identity'</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_kv_compressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_kv_compression</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">shared_kv_compression</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">shared_kv_compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="p">(</span><span class="n">layer</span><span class="p">[</span><span class="s1">'key_compression'</span><span class="p">],</span> <span class="n">layer</span><span class="p">[</span><span class="s1">'value_compression'</span><span class="p">])</span>
+            <span class="k">if</span> <span class="s1">'key_compression'</span> <span class="ow">in</span> <span class="n">layer</span> <span class="ow">and</span> <span class="s1">'value_compression'</span> <span class="ow">in</span> <span class="n">layer</span>
+            <span class="k">else</span> <span class="p">(</span><span class="n">layer</span><span class="p">[</span><span class="s1">'key_compression'</span><span class="p">],</span> <span class="n">layer</span><span class="p">[</span><span class="s1">'key_compression'</span><span class="p">])</span>
+            <span class="k">if</span> <span class="s1">'key_compression'</span> <span class="ow">in</span> <span class="n">layer</span>
+            <span class="k">else</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_start_residual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">stage</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">stage</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'attention'</span><span class="p">,</span> <span class="s1">'ffn'</span><span class="p">],</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
+        <span class="n">x_residual</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prenormalization</span><span class="p">:</span>
+            <span class="n">norm_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s1">_normalization'</span>
+            <span class="k">if</span> <span class="n">norm_key</span> <span class="ow">in</span> <span class="n">layer</span><span class="p">:</span>
+                <span class="n">x_residual</span> <span class="o">=</span> <span class="n">layer</span><span class="p">[</span><span class="n">norm_key</span><span class="p">](</span><span class="n">x_residual</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x_residual</span>
+
+    <span class="k">def</span> <span class="nf">_end_residual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">stage</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x_residual</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">stage</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'attention'</span><span class="p">,</span> <span class="s1">'ffn'</span><span class="p">],</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
+        <span class="n">x_residual</span> <span class="o">=</span> <span class="n">layer</span><span class="p">[</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s1">_residual_dropout'</span><span class="p">](</span><span class="n">x_residual</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x_residual</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">prenormalization</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">[</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s1">_normalization'</span><span class="p">](</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span>
+        <span class="p">),</span> <span class="s1">'The input must have 3 dimensions: (n_objects, n_tokens, d_token)'</span>
+        <span class="k">for</span> <span class="n">layer_idx</span><span class="p">,</span> <span class="n">layer</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">):</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">ModuleDict</span><span class="p">,</span> <span class="n">layer</span><span class="p">)</span>
+
+            <span class="n">query_idx</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">last_layer_query_idx</span> <span class="k">if</span> <span class="n">layer_idx</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="p">)</span>
+            <span class="n">x_residual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_residual</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">'attention'</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+            <span class="n">x_residual</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">layer</span><span class="p">[</span><span class="s1">'attention'</span><span class="p">](</span>
+                <span class="n">x_residual</span> <span class="k">if</span> <span class="n">query_idx</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">x_residual</span><span class="p">[:,</span> <span class="n">query_idx</span><span class="p">],</span>
+                <span class="n">x_residual</span><span class="p">,</span>
+                <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_kv_compressions</span><span class="p">(</span><span class="n">layer</span><span class="p">),</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">query_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="n">query_idx</span><span class="p">]</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_end_residual</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">'attention'</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x_residual</span><span class="p">)</span>
+
+            <span class="n">x_residual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_residual</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">'ffn'</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+            <span class="n">x_residual</span> <span class="o">=</span> <span class="n">layer</span><span class="p">[</span><span class="s1">'ffn'</span><span class="p">](</span><span class="n">x_residual</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_end_residual</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="s1">'ffn'</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x_residual</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">[</span><span class="s1">'output'</span><span class="p">](</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span></div>
+
+
+<div class="viewcode-block" id="FTTransformer"><a class="viewcode-back" href="../../api/rtdl.FTTransformer.html#rtdl.FTTransformer">[docs]</a><span class="k">class</span> <span class="nc">FTTransformer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">"""The FT-Transformer model proposed in [gorishniy2021revisiting].</span>
+
+<span class="sd">    Transforms features to tokens with `FeatureTokenizer` and applies `Transformer` [vaswani2017attention]</span>
+<span class="sd">    to the tokens. The following illustration provides a high-level overview of the</span>
+<span class="sd">    architecture:</span>
+
+<span class="sd">    .. image:: ../images/ft_transformer.png</span>
+<span class="sd">        :scale: 25%</span>
+<span class="sd">        :alt: FT-Transformer</span>
+
+<span class="sd">    The following illustration demonstrates one Transformer block for :code:`prenormalization=True`:</span>
+
+<span class="sd">    .. image:: ../images/transformer_block.png</span>
+<span class="sd">        :scale: 25%</span>
+<span class="sd">        :alt: PreNorm Transformer block</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            x_num = torch.randn(4, 3)</span>
+<span class="sd">            x_cat = torch.tensor([[0, 1], [1, 0], [0, 2], [1, 1]])</span>
+
+<span class="sd">            module = FTTransformer.make_baseline(</span>
+<span class="sd">                n_num_features=3,</span>
+<span class="sd">                cat_cardinalities=[2, 3],</span>
+<span class="sd">                d_token=8,</span>
+<span class="sd">                n_blocks=2,</span>
+<span class="sd">                attention_dropout=0.2,</span>
+<span class="sd">                ffn_d_hidden=6,</span>
+<span class="sd">                ffn_dropout=0.2,</span>
+<span class="sd">                residual_dropout=0.0,</span>
+<span class="sd">                d_out=1,</span>
+<span class="sd">            )</span>
+<span class="sd">            x = module(x_num, x_cat)</span>
+<span class="sd">            assert x.shape == (4, 1)</span>
+
+<span class="sd">            module = FTTransformer.make_default(</span>
+<span class="sd">                n_num_features=3,</span>
+<span class="sd">                cat_cardinalities=[2, 3],</span>
+<span class="sd">                d_out=1,</span>
+<span class="sd">            )</span>
+<span class="sd">            x = module(x_num, x_cat)</span>
+<span class="sd">            assert x.shape == (4, 1)</span>
+
+<span class="sd">        To learn more about the baseline and default parameters:</span>
+
+<span class="sd">        .. testcode::</span>
+
+<span class="sd">            baseline_parameters = FTTransformer.get_baseline_transformer_subconfig()</span>
+<span class="sd">            default_parameters = FTTransformer.get_default_transformer_config()</span>
+
+<span class="sd">    References:</span>
+<span class="sd">        * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">        * [vaswani2017attention] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin, "Attention Is All You Need", 2017</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">feature_tokenizer</span><span class="p">:</span> <span class="n">FeatureTokenizer</span><span class="p">,</span> <span class="n">transformer</span><span class="p">:</span> <span class="n">Transformer</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Note:</span>
+<span class="sd">            `make_baseline` and `make_default` are the recommended constructors.</span>
+<span class="sd">        """</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">transformer</span><span class="o">.</span><span class="n">prenormalization</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="s1">'attention_normalization'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">transformer</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span>
+                <span class="s1">'In the prenormalization setting, FT-Transformer does not '</span>
+                <span class="s1">'allow using the first normalization layer '</span>
+                <span class="s1">'in the first transformer block'</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feature_tokenizer</span> <span class="o">=</span> <span class="n">feature_tokenizer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cls_token</span> <span class="o">=</span> <span class="n">CLSToken</span><span class="p">(</span>
+            <span class="n">feature_tokenizer</span><span class="o">.</span><span class="n">d_token</span><span class="p">,</span> <span class="n">feature_tokenizer</span><span class="o">.</span><span class="n">initialization</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transformer</span> <span class="o">=</span> <span class="n">transformer</span>
+
+<div class="viewcode-block" id="FTTransformer.get_baseline_transformer_subconfig"><a class="viewcode-back" href="../../api/rtdl.FTTransformer.html#rtdl.FTTransformer.get_baseline_transformer_subconfig">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_baseline_transformer_subconfig</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s1">'FTTransformer'</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="sd">"""Get the baseline subset of parameters for the backbone."""</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">'attention_n_heads'</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="s1">'attention_initialization'</span><span class="p">:</span> <span class="s1">'kaiming'</span><span class="p">,</span>
+            <span class="s1">'ffn_activation'</span><span class="p">:</span> <span class="s1">'ReGLU'</span><span class="p">,</span>
+            <span class="s1">'attention_normalization'</span><span class="p">:</span> <span class="s1">'LayerNorm'</span><span class="p">,</span>
+            <span class="s1">'ffn_normalization'</span><span class="p">:</span> <span class="s1">'LayerNorm'</span><span class="p">,</span>
+            <span class="s1">'prenormalization'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s1">'first_prenormalization'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">'last_layer_query_idx'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">'n_tokens'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">'kv_compression_ratio'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">'kv_compression_sharing'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">'head_activation'</span><span class="p">:</span> <span class="s1">'ReLU'</span><span class="p">,</span>
+            <span class="s1">'head_normalization'</span><span class="p">:</span> <span class="s1">'LayerNorm'</span><span class="p">,</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="FTTransformer.get_default_transformer_config"><a class="viewcode-back" href="../../api/rtdl.FTTransformer.html#rtdl.FTTransformer.get_default_transformer_config">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_default_transformer_config</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s1">'FTTransformer'</span><span class="p">],</span> <span class="o">*</span><span class="p">,</span> <span class="n">n_blocks</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="sd">"""Get the default parameters for the backbone.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            The configurations are different for different values of:code:`n_blocks`.</span>
+<span class="sd">        """</span>
+        <span class="k">assert</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">n_blocks</span> <span class="o">&lt;=</span> <span class="mi">6</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">'d_token'</span><span class="p">:</span> <span class="p">[</span><span class="mi">96</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">320</span><span class="p">,</span> <span class="mi">384</span><span class="p">],</span>
+            <span class="s1">'attention_dropout'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">],</span>
+            <span class="s1">'ffn_dropout'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">],</span>
+        <span class="p">}</span>
+        <span class="n">arch_subconfig</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="n">n_blocks</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">grid</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>  <span class="c1"># type: ignore</span>
+        <span class="n">baseline_subconfig</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get_baseline_transformer_subconfig</span><span class="p">()</span>
+        <span class="c1"># (4 / 3) for ReGLU/GEGLU activations results in almost the same parameter count</span>
+        <span class="c1"># as (2.0) for element-wise activations (e.g. ReLU or GELU; see the "else" branch)</span>
+        <span class="n">ffn_d_hidden_factor</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">(</span><span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span> <span class="k">if</span> <span class="n">_is_glu_activation</span><span class="p">(</span><span class="n">baseline_subconfig</span><span class="p">[</span><span class="s1">'ffn_activation'</span><span class="p">])</span> <span class="k">else</span> <span class="mf">2.0</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">'n_blocks'</span><span class="p">:</span> <span class="n">n_blocks</span><span class="p">,</span>
+            <span class="s1">'residual_dropout'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+            <span class="s1">'ffn_d_hidden'</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">arch_subconfig</span><span class="p">[</span><span class="s1">'d_token'</span><span class="p">]</span> <span class="o">*</span> <span class="n">ffn_d_hidden_factor</span><span class="p">),</span>
+            <span class="o">**</span><span class="n">arch_subconfig</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">baseline_subconfig</span><span class="p">,</span>
+        <span class="p">}</span></div>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_make</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">n_num_features</span><span class="p">,</span>
+        <span class="n">cat_cardinalities</span><span class="p">,</span>
+        <span class="n">transformer_config</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">feature_tokenizer</span> <span class="o">=</span> <span class="n">FeatureTokenizer</span><span class="p">(</span>
+            <span class="n">n_num_features</span><span class="o">=</span><span class="n">n_num_features</span><span class="p">,</span>
+            <span class="n">cat_cardinalities</span><span class="o">=</span><span class="n">cat_cardinalities</span><span class="p">,</span>
+            <span class="n">d_token</span><span class="o">=</span><span class="n">transformer_config</span><span class="p">[</span><span class="s1">'d_token'</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">transformer_config</span><span class="p">[</span><span class="s1">'d_out'</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">transformer_config</span><span class="p">[</span><span class="s1">'head_activation'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">transformer_config</span><span class="p">[</span><span class="s1">'kv_compression_ratio'</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">transformer_config</span><span class="p">[</span><span class="s1">'n_tokens'</span><span class="p">]</span> <span class="o">=</span> <span class="n">feature_tokenizer</span><span class="o">.</span><span class="n">n_tokens</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">FTTransformer</span><span class="p">(</span>
+            <span class="n">feature_tokenizer</span><span class="p">,</span>
+            <span class="n">Transformer</span><span class="p">(</span><span class="o">**</span><span class="n">transformer_config</span><span class="p">),</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="FTTransformer.make_baseline"><a class="viewcode-back" href="../../api/rtdl.FTTransformer.html#rtdl.FTTransformer.make_baseline">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">make_baseline</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s1">'FTTransformer'</span><span class="p">],</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">n_num_features</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">cat_cardinalities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>
+        <span class="n">d_token</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">n_blocks</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">attention_dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">ffn_d_hidden</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">ffn_dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">residual_dropout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">last_layer_query_idx</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">slice</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">kv_compression_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">kv_compression_sharing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'FTTransformer'</span><span class="p">:</span>
+        <span class="sd">"""Create a "baseline" `FTTransformer`.</span>
+
+<span class="sd">        This variation of FT-Transformer was used in [gorishniy2021revisiting]. See</span>
+<span class="sd">        `get_baseline_transformer_subconfig` to learn the values of other parameters.</span>
+<span class="sd">        See `FTTransformer` for usage examples.</span>
+
+<span class="sd">        Tip:</span>
+<span class="sd">            `get_default_transformer_config` can serve as a starting point for choosing</span>
+<span class="sd">            hyperparameter values.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            n_num_features: the number of continuous features</span>
+<span class="sd">            cat_cardinalities: the cardinalities of categorical features (see</span>
+<span class="sd">                `CategoricalFeatureTokenizer` to learn more about cardinalities)</span>
+<span class="sd">            d_token: the token size for each feature. Must be a multiple of :code:`n_heads=8`.</span>
+<span class="sd">            n_blocks: the number of Transformer blocks</span>
+<span class="sd">            attention_dropout: the dropout for attention blocks (see `MultiheadAttention`).</span>
+<span class="sd">                Usually, positive values work better (even when the number of features is low).</span>
+<span class="sd">            ffn_d_hidden: the *input* size for the *second* linear layer in `Transformer.FFN`.</span>
+<span class="sd">                Note that it can be different from the output size of the first linear</span>
+<span class="sd">                layer, since activations such as ReGLU or GEGLU change the size of input.</span>
+<span class="sd">                For example, if :code:`ffn_d_hidden=10` and the activation is ReGLU (which</span>
+<span class="sd">                is always true for the baseline and default configurations), then the</span>
+<span class="sd">                output size of the first linear layer will be set to :code:`20`.</span>
+<span class="sd">            ffn_dropout: the dropout rate after the first linear layer in `Transformer.FFN`.</span>
+<span class="sd">            residual_dropout: the dropout rate for the output of each residual branch of</span>
+<span class="sd">                all Transformer blocks.</span>
+<span class="sd">            last_layer_query_idx: indices of tokens that should be processed by the last</span>
+<span class="sd">                Transformer block. Note that for most cases there is no need to apply</span>
+<span class="sd">                the last Transformer block to anything except for the [CLS]-token. Hence,</span>
+<span class="sd">                runtime and memory can be saved by setting :code:`last_layer_query_idx=[-1]`,</span>
+<span class="sd">                since the :code:`-1` is the position of [CLS]-token in FT-Transformer.</span>
+<span class="sd">                Note that this will not affect the result in any way.</span>
+<span class="sd">            kv_compression_ratio: apply the technique from [wang2020linformer] to speed</span>
+<span class="sd">                up attention modules when the number of features is large. Can actually</span>
+<span class="sd">                slow things down if the number of features is too low. Note that this</span>
+<span class="sd">                option can affect task metrics in unpredictable way. Overall, use this</span>
+<span class="sd">                option with caution. See `MultiheadAttention` for some examples and the</span>
+<span class="sd">                implementation of `Transformer` to see how this option is used.</span>
+<span class="sd">            kv_compression_sharing: weight sharing policy for :code:`kv_compression_ratio`.</span>
+<span class="sd">                Must be one of :code:`[None, 'headwise', 'key-value', 'layerwise']`.</span>
+<span class="sd">                See [wang2020linformer] to learn more about sharing policies.</span>
+<span class="sd">                :code:`headwise` and :code:`key-value` are reasonable default choices. If</span>
+<span class="sd">                :code:`kv_compression_ratio` is `None`, then this parameter also must be</span>
+<span class="sd">                `None`. Otherwise, it must not be `None` (compression parameters must be</span>
+<span class="sd">                shared in some way).</span>
+<span class="sd">            d_out: the output size.</span>
+
+<span class="sd">        References:</span>
+<span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">            * [wang2020linformer] Sinong Wang, Belinda Z. Li, Madian Khabsa, Han Fang, Hao Ma "Linformer: Self-Attention with Linear Complexity", 2020</span>
+<span class="sd">        """</span>
+        <span class="n">transformer_config</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get_baseline_transformer_subconfig</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">arg_name</span> <span class="ow">in</span> <span class="p">[</span>
+            <span class="s1">'n_blocks'</span><span class="p">,</span>
+            <span class="s1">'d_token'</span><span class="p">,</span>
+            <span class="s1">'attention_dropout'</span><span class="p">,</span>
+            <span class="s1">'ffn_d_hidden'</span><span class="p">,</span>
+            <span class="s1">'ffn_dropout'</span><span class="p">,</span>
+            <span class="s1">'residual_dropout'</span><span class="p">,</span>
+            <span class="s1">'last_layer_query_idx'</span><span class="p">,</span>
+            <span class="s1">'kv_compression_ratio'</span><span class="p">,</span>
+            <span class="s1">'kv_compression_sharing'</span><span class="p">,</span>
+            <span class="s1">'d_out'</span><span class="p">,</span>
+        <span class="p">]:</span>
+            <span class="n">transformer_config</span><span class="p">[</span><span class="n">arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()[</span><span class="n">arg_name</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_make</span><span class="p">(</span><span class="n">n_num_features</span><span class="p">,</span> <span class="n">cat_cardinalities</span><span class="p">,</span> <span class="n">transformer_config</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FTTransformer.make_default"><a class="viewcode-back" href="../../api/rtdl.FTTransformer.html#rtdl.FTTransformer.make_default">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">make_default</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s1">'FTTransformer'</span><span class="p">],</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">n_num_features</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">cat_cardinalities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>
+        <span class="n">n_blocks</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">last_layer_query_idx</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">slice</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">kv_compression_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">kv_compression_sharing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'FTTransformer'</span><span class="p">:</span>
+        <span class="sd">"""Create the default `FTTransformer`.</span>
+
+<span class="sd">        With :code:`n_blocks=3` (default) it is the FT-Transformer variation that is</span>
+<span class="sd">        referred to as "default FT-Transformer" in [gorishniy2021revisiting]. See</span>
+<span class="sd">        `FTTransformer` for usage examples. See `FTTransformer.make_baseline` for</span>
+<span class="sd">        parameter descriptions.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            The second component of the default FT-Transformer is the default optimizer,</span>
+<span class="sd">            which can be created with the `make_default_optimizer` method.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            According to [gorishniy2021revisiting], the default FT-Transformer is</span>
+<span class="sd">            effective in the ensembling mode (i.e. when predictions of several default</span>
+<span class="sd">            FT-Transformers are averaged). For a single FT-Transformer, it is still</span>
+<span class="sd">            possible to achieve better results by tuning hyperparameter for the</span>
+<span class="sd">            `make_baseline` constructor.</span>
+
+<span class="sd">        References:</span>
+<span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
+<span class="sd">        """</span>
+        <span class="n">transformer_config</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get_default_transformer_config</span><span class="p">(</span><span class="n">n_blocks</span><span class="o">=</span><span class="n">n_blocks</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arg_name</span> <span class="ow">in</span> <span class="p">[</span>
+            <span class="s1">'last_layer_query_idx'</span><span class="p">,</span>
+            <span class="s1">'kv_compression_ratio'</span><span class="p">,</span>
+            <span class="s1">'kv_compression_sharing'</span><span class="p">,</span>
+            <span class="s1">'d_out'</span><span class="p">,</span>
+        <span class="p">]:</span>
+            <span class="n">transformer_config</span><span class="p">[</span><span class="n">arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()[</span><span class="n">arg_name</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_make</span><span class="p">(</span><span class="n">n_num_features</span><span class="p">,</span> <span class="n">cat_cardinalities</span><span class="p">,</span> <span class="n">transformer_config</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FTTransformer.optimization_param_groups"><a class="viewcode-back" href="../../api/rtdl.FTTransformer.html#rtdl.FTTransformer.optimization_param_groups">[docs]</a>    <span class="k">def</span> <span class="nf">optimization_param_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+        <span class="sd">"""The replacement for :code:`.parameters()` when creating optimizers.</span>
+
+<span class="sd">        Example::</span>
+
+<span class="sd">            optimizer = AdamW(</span>
+<span class="sd">                model.optimization_param_groups(), lr=1e-4, weight_decay=1e-5</span>
+<span class="sd">            )</span>
+<span class="sd">        """</span>
+        <span class="n">no_wd_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'feature_tokenizer'</span><span class="p">,</span> <span class="s1">'normalization'</span><span class="p">,</span> <span class="s1">'.bias'</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no_wd_names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="kc">None</span><span class="p">),</span> <span class="n">FeatureTokenizer</span>
+        <span class="p">),</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">named_modules</span><span class="p">()</span> <span class="k">if</span> <span class="n">no_wd_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">name</span><span class="p">)</span>
+            <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformer</span><span class="o">.</span><span class="n">blocks</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'attention_normalization'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformer</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># type: ignore</span>
+            <span class="o">+</span> <span class="mi">1</span>
+        <span class="p">),</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
+
+        <span class="k">def</span> <span class="nf">needs_wd</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">name</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">no_wd_names</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">'params'</span><span class="p">:</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">named_parameters</span><span class="p">()</span> <span class="k">if</span> <span class="n">needs_wd</span><span class="p">(</span><span class="n">k</span><span class="p">)]},</span>
+            <span class="p">{</span>
+                <span class="s1">'params'</span><span class="p">:</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">named_parameters</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">needs_wd</span><span class="p">(</span><span class="n">k</span><span class="p">)],</span>
+                <span class="s1">'weight_decay'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">]</span></div>
+
+<div class="viewcode-block" id="FTTransformer.make_default_optimizer"><a class="viewcode-back" href="../../api/rtdl.FTTransformer.html#rtdl.FTTransformer.make_default_optimizer">[docs]</a>    <span class="k">def</span> <span class="nf">make_default_optimizer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">AdamW</span><span class="p">:</span>
+        <span class="sd">"""Make the optimizer for the default FT-Transformer."""</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">AdamW</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">optimization_param_groups</span><span class="p">(),</span>
+            <span class="n">lr</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span>
+            <span class="n">weight_decay</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_num</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">x_cat</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tokenizer</span><span class="p">(</span><span class="n">x_num</span><span class="p">,</span> <span class="n">x_cat</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cls_token</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span></div>
+</pre></div>
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2021, Yandex LLC.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.2.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
