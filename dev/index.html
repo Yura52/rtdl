@@ -5,7 +5,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -47,7 +48,7 @@
   
   
   
-    <title>Revisiting Tabular Deep Learning &#8212; rtdl 0.0.10.dev0 documentation</title>
+    <title>Research on Tabular Deep Learning &#8212; rtdl 0.0.11.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/material.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -84,7 +85,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="#" title="rtdl 0.0.10.dev0 documentation"
+        <a href="#" title="rtdl 0.0.11.dev0 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#127968;</i>
@@ -96,8 +97,8 @@
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          <span class="md-header-nav__topic">rtdl 0.0.10.dev0</span>
-          <span class="md-header-nav__topic"> Revisiting Tabular Deep Learning </span>
+          <span class="md-header-nav__topic">rtdl 0.0.11.dev0</span>
+          <span class="md-header-nav__topic"> Research on Tabular Deep Learning </span>
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -175,13 +176,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="#" title="rtdl 0.0.10.dev0 documentation" class="md-nav__button md-logo">
+    <a href="#" title="rtdl 0.0.11.dev0 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#127968;</i>
       
     </a>
     <a href="#"
-       title="rtdl 0.0.10.dev0 documentation">rtdl 0.0.10.dev0</a>
+       title="rtdl 0.0.11.dev0 documentation">rtdl 0.0.11.dev0</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/yandex-research/rtdl" title="Go to repository" class="md-source" data-md-source="github">
@@ -249,6 +250,20 @@
     </li></ul>
     
     </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="rtdl_data.html" class="md-nav__link">rtdl.data</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="rtdl_data.html#functions" class="md-nav__link">Functions</a>
+      
+    
+    </li></ul>
+    
+    </li>
   </ul>
   
 
@@ -276,31 +291,16 @@
         <div class="md-content">
           <article class="md-content__inner md-typeset" role="main">
             
-  
-<h1 id="index--page-root">Revisiting Tabular Deep Learning<a class="headerlink" href="#index--page-root" title="Permalink to this headline">¶</a></h1>
-<p><code class="code docutils literal notranslate"><span class="pre">rtdl</span></code> (Revisiting Tabular Deep Learning) is a Python package based on the <a class="reference external" href="https://github.com/yandex-research/rtdl">implementation</a>
-of the paper “Revisiting Deep Learning Models for Tabular Data”:</p>
-<ul class="simple">
-<li><p>It can be used by practitioners looking for Deep Learning models for tabular data</p></li>
-<li><p>It can serve as a source of baselines for researchers (<strong>excluding FT-Transformer</strong>, see the warning below)</p></li>
-<li><p>You can follow releases by hitting “Watch” / “Custom” / “Releases” in the right upper corner of the GitHub interface</p></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you are a <em>researcher</em> (not a practitioner) and plan to use the
-FT-Transformer model as a baseline in your paper, please, use the original implementation
-from <a class="reference external" href="https://github.com/yandex-research/rtdl/blob/main/bin/ft_transformer.py">ft_transformer.py</a>.
-We will remove this limitation soon (i.e. <code class="code docutils literal notranslate"><span class="pre">rtdl</span></code> will become the recommended way to
-use FT-Transformer in papers).</p>
-</div>
-<p>Users can share their experience here: <a class="reference external" href="https://github.com/yandex-research/rtdl/discussions/1">https://github.com/yandex-research/rtdl/discussions/1</a></p>
-
+  <section id="research-on-tabular-deep-learning">
+<h1 id="index--page-root">Research on Tabular Deep Learning<a class="headerlink" href="#index--page-root" title="Permalink to this headline">¶</a></h1>
+<p><code class="code docutils literal notranslate"><span class="pre">rtdl</span></code> is a PyTorch-based package providing a user-friendly API for the main models and concepts from the <a class="reference external" href="https://github.com/yandex-research/rtdl#projects">RTDL projects</a>. The name is an abbreviation for “Research on Tabular Deep Learning”.</p>
+<section id="installation">
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rtdl</span>
 </pre></div>
 </div>
-
-
+</section>
+<section id="documentation">
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>See the API reference in the left sidebar</p></li>
@@ -308,16 +308,15 @@ use FT-Transformer in papers).</p>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
-
-<hr class="docutils"/>
-
+</section>
+<section id="indices-and-tables">
 <h2 id="indices-and-tables">Indices and Tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 </ul>
-
-
+</section>
+</section>
 
 
           </article>

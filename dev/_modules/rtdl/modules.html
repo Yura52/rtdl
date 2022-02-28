@@ -47,7 +47,7 @@
   
   
   
-    <title>rtdl.modules &#8212; rtdl 0.0.10.dev0 documentation</title>
+    <title>rtdl.modules &#8212; rtdl 0.0.11.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -83,7 +83,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../../index.html" title="rtdl 0.0.10.dev0 documentation"
+        <a href="../../index.html" title="rtdl 0.0.11.dev0 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#127968;</i>
@@ -95,7 +95,7 @@
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          <span class="md-header-nav__topic">rtdl 0.0.10.dev0</span>
+          <span class="md-header-nav__topic">rtdl 0.0.11.dev0</span>
           <span class="md-header-nav__topic"> rtdl.modules </span>
         </div>
       </div>
@@ -181,13 +181,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../../index.html" title="rtdl 0.0.10.dev0 documentation" class="md-nav__button md-logo">
+    <a href="../../index.html" title="rtdl 0.0.11.dev0 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#127968;</i>
       
     </a>
     <a href="../../index.html"
-       title="rtdl 0.0.10.dev0 documentation">rtdl 0.0.10.dev0</a>
+       title="rtdl 0.0.11.dev0 documentation">rtdl 0.0.11.dev0</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/yandex-research/rtdl" title="Go to repository" class="md-source" data-md-source="github">
@@ -255,6 +255,20 @@
     </li></ul>
     
     </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl_data.html" class="md-nav__link">rtdl.data</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../../rtdl_data.html#functions" class="md-nav__link">Functions</a>
+      
+    
+    </li></ul>
+    
+    </li>
   </ul>
   
 
@@ -297,6 +311,7 @@
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">functional</span> <span class="k">as</span> <span class="n">rtdlF</span>
 
 <span class="n">ModuleType</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">]]</span>
+<span class="n">_INTERNAL_ERROR_MESSAGE</span> <span class="o">=</span> <span class="s1">'Internal error. Please, open an issue.'</span>
 
 
 <span class="k">def</span> <span class="nf">_is_glu_activation</span><span class="p">(</span><span class="n">activation</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">):</span>
@@ -308,7 +323,7 @@
 
 
 <span class="k">def</span> <span class="nf">_all_or_none</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="ReGLU"><a class="viewcode-back" href="../../api/rtdl.ReGLU.html#rtdl.ReGLU">[docs]</a><span class="k">class</span> <span class="nc">ReGLU</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
@@ -498,8 +513,8 @@
 <span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
 <span class="sd">        """</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="k">assert</span> <span class="n">cardinalities</span>
-        <span class="k">assert</span> <span class="n">d_token</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">cardinalities</span><span class="p">,</span> <span class="s1">'cardinalities must be non-empty'</span>
+        <span class="k">assert</span> <span class="n">d_token</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'d_token must be positive'</span>
         <span class="n">initialization_</span> <span class="o">=</span> <span class="n">_TokenInitialization</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="n">initialization</span><span class="p">)</span>
 
         <span class="n">category_offsets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">cardinalities</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -576,8 +591,10 @@
 <span class="sd">            d_token: the size of one token.</span>
 <span class="sd">        """</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="k">assert</span> <span class="n">n_num_features</span> <span class="o">&gt;=</span> <span class="mi">0</span>
-        <span class="k">assert</span> <span class="n">n_num_features</span> <span class="ow">or</span> <span class="n">cat_cardinalities</span>
+        <span class="k">assert</span> <span class="n">n_num_features</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'n_num_features must be non-negative'</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">n_num_features</span> <span class="ow">or</span> <span class="n">cat_cardinalities</span>
+        <span class="p">),</span> <span class="s1">'at least one of n_num_features or cat_cardinalities must be positive/non-empty'</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">initialization</span> <span class="o">=</span> <span class="s1">'uniform'</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span> <span class="o">=</span> <span class="p">(</span>
             <span class="n">NumericalFeatureTokenizer</span><span class="p">(</span>
@@ -629,9 +646,15 @@
 <span class="sd">        Raises:</span>
 <span class="sd">            AssertionError: if the described requirements for the inputs are not met.</span>
 <span class="sd">        """</span>
-        <span class="k">assert</span> <span class="n">x_num</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">x_cat</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-        <span class="n">_all_or_none</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span><span class="p">,</span> <span class="n">x_num</span><span class="p">])</span>
-        <span class="n">_all_or_none</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">cat_tokenizer</span><span class="p">,</span> <span class="n">x_cat</span><span class="p">])</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">x_num</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">x_cat</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">),</span> <span class="s1">'At least one of x_num and x_cat must be presented'</span>
+        <span class="k">assert</span> <span class="n">_all_or_none</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span><span class="p">,</span> <span class="n">x_num</span><span class="p">]</span>
+        <span class="p">),</span> <span class="s1">'If self.num_tokenizer is (not) None, then x_num must (not) be None'</span>
+        <span class="k">assert</span> <span class="n">_all_or_none</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">cat_tokenizer</span><span class="p">,</span> <span class="n">x_cat</span><span class="p">]</span>
+        <span class="p">),</span> <span class="s1">'If self.cat_tokenizer is (not) None, then x_cat must (not) be None'</span>
         <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_tokenizer</span><span class="p">(</span><span class="n">x_num</span><span class="p">))</span>
@@ -710,17 +733,21 @@
 
 
 <span class="k">def</span> <span class="nf">_make_nn_module</span><span class="p">(</span><span class="n">module_type</span><span class="p">:</span> <span class="n">ModuleType</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">:</span>
-    <span class="k">return</span> <span class="p">(</span>
-        <span class="p">(</span>
-            <span class="n">ReGLU</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">module_type</span> <span class="o">==</span> <span class="s1">'ReGLU'</span>
-            <span class="k">else</span> <span class="n">GEGLU</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">module_type</span> <span class="o">==</span> <span class="s1">'GEGLU'</span>
-            <span class="k">else</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">nn</span><span class="p">,</span> <span class="n">module_type</span><span class="p">)(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-        <span class="p">)</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-        <span class="k">else</span> <span class="n">module_type</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-    <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">module_type</span> <span class="o">==</span> <span class="s1">'ReGLU'</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ReGLU</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">module_type</span> <span class="o">==</span> <span class="s1">'GEGLU'</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">GEGLU</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">cls</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">nn</span><span class="p">,</span> <span class="n">module_type</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">'Failed to construct the module </span><span class="si">{</span><span class="n">module_type</span><span class="si">}</span><span class="s1"> with the arguments </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s1">'</span>
+                <span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">module_type</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="MLP"><a class="viewcode-back" href="../../api/rtdl.MLP.html#rtdl.MLP">[docs]</a><span class="k">class</span> <span class="nc">MLP</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
@@ -781,7 +808,6 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dropouts</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
             <span class="n">dropouts</span> <span class="o">=</span> <span class="p">[</span><span class="n">dropouts</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_layers</span><span class="p">)</span>
         <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_layers</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">dropouts</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="n">activation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'ReGLU'</span><span class="p">,</span> <span class="s1">'GEGLU'</span><span class="p">]</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
             <span class="o">*</span><span class="p">[</span>
@@ -828,10 +854,10 @@
 <span class="sd">        References:</span>
 <span class="sd">            * [gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, "Revisiting Deep Learning Models for Tabular Data", 2021</span>
 <span class="sd">        """</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dropout</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dropout</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span> <span class="s1">'In this constructor, dropout must be float'</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_layers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
             <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">d_layers</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span>
-                <span class="s1">'if d_layers contains more than two elements, then'</span>
+                <span class="s1">'In this constructor, if d_layers contains more than two elements, then'</span>
                 <span class="s1">' all elements except for the first and the last ones must be equal.'</span>
             <span class="p">)</span>
         <span class="k">return</span> <span class="n">MLP</span><span class="p">(</span>
@@ -960,7 +986,6 @@
 <span class="sd">        Note:</span>
 <span class="sd">            `make_baseline` is the recommended constructor.</span>
 <span class="sd">        """</span>
-        <span class="k">assert</span> <span class="n">activation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'ReGLU'</span><span class="p">,</span> <span class="s1">'GEGLU'</span><span class="p">]</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">first_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_in</span><span class="p">,</span> <span class="n">d_main</span><span class="p">)</span>
@@ -1105,7 +1130,7 @@
 <span class="sd">        """</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">n_heads</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">assert</span> <span class="n">d_token</span> <span class="o">%</span> <span class="n">n_heads</span> <span class="o">==</span> <span class="mi">0</span>
+            <span class="k">assert</span> <span class="n">d_token</span> <span class="o">%</span> <span class="n">n_heads</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'d_token must be a multiple of n_heads'</span>
         <span class="k">assert</span> <span class="n">initialization</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'kaiming'</span><span class="p">,</span> <span class="s1">'xavier'</span><span class="p">]</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">W_q</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">d_token</span><span class="p">,</span> <span class="n">d_token</span><span class="p">,</span> <span class="n">bias</span><span class="p">)</span>
@@ -1156,10 +1181,12 @@
 <span class="sd">        Returns:</span>
 <span class="sd">            (tokens, attention_stats)</span>
 <span class="sd">        """</span>
-        <span class="n">_all_or_none</span><span class="p">([</span><span class="n">key_compression</span><span class="p">,</span> <span class="n">value_compression</span><span class="p">])</span>
+        <span class="k">assert</span> <span class="n">_all_or_none</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">key_compression</span><span class="p">,</span> <span class="n">value_compression</span><span class="p">]</span>
+        <span class="p">),</span> <span class="s1">'If key_compression is (not) None, then value_compression must (not) be None'</span>
         <span class="n">q</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_q</span><span class="p">(</span><span class="n">x_q</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_k</span><span class="p">(</span><span class="n">x_kv</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_v</span><span class="p">(</span><span class="n">x_kv</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">tensor</span> <span class="ow">in</span> <span class="p">[</span><span class="n">q</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">]:</span>
-            <span class="k">assert</span> <span class="n">tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span> <span class="o">==</span> <span class="mi">0</span>
+            <span class="k">assert</span> <span class="n">tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_heads</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
         <span class="k">if</span> <span class="n">key_compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">k</span> <span class="o">=</span> <span class="n">key_compression</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
             <span class="n">v</span> <span class="o">=</span> <span class="n">value_compression</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
@@ -1275,11 +1302,19 @@
         <span class="n">d_out</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">last_layer_query_idx</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">'last_layer_query_idx must be None, list[int] or slice. '</span>
+                <span class="sa">f</span><span class="s1">'Do you mean last_layer_query_idx=[</span><span class="si">{</span><span class="n">last_layer_query_idx</span><span class="si">}</span><span class="s1">] ?'</span>
+            <span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">prenormalization</span><span class="p">:</span>
             <span class="k">assert</span> <span class="p">(</span>
                 <span class="ow">not</span> <span class="n">first_prenormalization</span>
             <span class="p">),</span> <span class="s1">'If `prenormalization` is False, then `first_prenormalization` must be False'</span>
-        <span class="n">_all_or_none</span><span class="p">([</span><span class="n">n_tokens</span><span class="p">,</span> <span class="n">kv_compression_ratio</span><span class="p">,</span> <span class="n">kv_compression_sharing</span><span class="p">])</span>
+        <span class="k">assert</span> <span class="n">_all_or_none</span><span class="p">([</span><span class="n">n_tokens</span><span class="p">,</span> <span class="n">kv_compression_ratio</span><span class="p">,</span> <span class="n">kv_compression_sharing</span><span class="p">]),</span> <span class="p">(</span>
+            <span class="s1">'If any of the following arguments is (not) None, then all of them must (not) be None: '</span>
+            <span class="s1">'n_tokens, kv_compression_ratio, kv_compression_sharing'</span>
+        <span class="p">)</span>
         <span class="k">assert</span> <span class="n">kv_compression_sharing</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">'headwise'</span><span class="p">,</span> <span class="s1">'key-value'</span><span class="p">,</span> <span class="s1">'layerwise'</span><span class="p">]</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">prenormalization</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">WARNINGS</span><span class="p">[</span><span class="s1">'prenormalization'</span><span class="p">]:</span>
@@ -1290,7 +1325,9 @@
                     <span class="s1">'rtdl.Transformer.WARNINGS dictionary.'</span><span class="p">,</span>
                     <span class="ne">UserWarning</span><span class="p">,</span>
                 <span class="p">)</span>
-            <span class="k">assert</span> <span class="ow">not</span> <span class="n">first_prenormalization</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="ow">not</span> <span class="n">first_prenormalization</span>
+            <span class="p">),</span> <span class="s1">'If prenormalization is False, then first_prenormalization is ignored and must be set to False'</span>
         <span class="k">if</span> <span class="p">(</span>
             <span class="n">prenormalization</span>
             <span class="ow">and</span> <span class="n">first_prenormalization</span>
@@ -1307,7 +1344,9 @@
             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="nf">make_kv_compression</span><span class="p">():</span>
-            <span class="k">assert</span> <span class="n">kv_compression_ratio</span> <span class="ow">and</span> <span class="n">n_tokens</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="n">n_tokens</span> <span class="ow">and</span> <span class="n">kv_compression_ratio</span>
+            <span class="p">),</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>  <span class="c1"># for mypy</span>
             <span class="c1"># https://github.com/pytorch/fairseq/blob/1bba712622b8ae4efb3eb793a8a40da386fe11d0/examples/linformer/linformer_src/modules/multihead_linear_attention.py#L83</span>
             <span class="k">return</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_tokens</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n_tokens</span> <span class="o">*</span> <span class="n">kv_compression_ratio</span><span class="p">),</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
@@ -1354,7 +1393,9 @@
                 <span class="k">if</span> <span class="n">kv_compression_sharing</span> <span class="o">==</span> <span class="s1">'headwise'</span><span class="p">:</span>
                     <span class="n">layer</span><span class="p">[</span><span class="s1">'value_compression'</span><span class="p">]</span> <span class="o">=</span> <span class="n">make_kv_compression</span><span class="p">()</span>
                 <span class="k">else</span><span class="p">:</span>
-                    <span class="k">assert</span> <span class="n">kv_compression_sharing</span> <span class="o">==</span> <span class="s1">'key-value'</span>
+                    <span class="k">assert</span> <span class="p">(</span>
+                        <span class="n">kv_compression_sharing</span> <span class="o">==</span> <span class="s1">'key-value'</span>
+                    <span class="p">),</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">Head</span><span class="p">(</span>
@@ -1377,7 +1418,7 @@
         <span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_start_residual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">stage</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="n">stage</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'attention'</span><span class="p">,</span> <span class="s1">'ffn'</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">stage</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'attention'</span><span class="p">,</span> <span class="s1">'ffn'</span><span class="p">],</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
         <span class="n">x_residual</span> <span class="o">=</span> <span class="n">x</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prenormalization</span><span class="p">:</span>
             <span class="n">norm_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s1">_normalization'</span>
@@ -1386,7 +1427,7 @@
         <span class="k">return</span> <span class="n">x_residual</span>
 
     <span class="k">def</span> <span class="nf">_end_residual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">stage</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x_residual</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="n">stage</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'attention'</span><span class="p">,</span> <span class="s1">'ffn'</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">stage</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'attention'</span><span class="p">,</span> <span class="s1">'ffn'</span><span class="p">],</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
         <span class="n">x_residual</span> <span class="o">=</span> <span class="n">layer</span><span class="p">[</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s1">_residual_dropout'</span><span class="p">](</span><span class="n">x_residual</span><span class="p">)</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x_residual</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">prenormalization</span><span class="p">:</span>
@@ -1394,7 +1435,9 @@
         <span class="k">return</span> <span class="n">x</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
-        <span class="k">assert</span> <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span>
+        <span class="p">),</span> <span class="s1">'The input must have 3 dimensions: (n_objects, n_tokens, d_token)'</span>
         <span class="k">for</span> <span class="n">layer_idx</span><span class="p">,</span> <span class="n">layer</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">):</span>
             <span class="n">layer</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">ModuleDict</span><span class="p">,</span> <span class="n">layer</span><span class="p">)</span>
 
@@ -1486,7 +1529,11 @@
 <span class="sd">        """</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">transformer</span><span class="o">.</span><span class="n">prenormalization</span><span class="p">:</span>
-            <span class="k">assert</span> <span class="s1">'attention_normalization'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">transformer</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># type: ignore</span>
+            <span class="k">assert</span> <span class="s1">'attention_normalization'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">transformer</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span>
+                <span class="s1">'In the prenormalization setting, FT-Transformer does not '</span>
+                <span class="s1">'allow using the first normalization layer '</span>
+                <span class="s1">'in the first transformer block'</span>
+            <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">feature_tokenizer</span> <span class="o">=</span> <span class="n">feature_tokenizer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cls_token</span> <span class="o">=</span> <span class="n">CLSToken</span><span class="p">(</span>
             <span class="n">feature_tokenizer</span><span class="o">.</span><span class="n">d_token</span><span class="p">,</span> <span class="n">feature_tokenizer</span><span class="o">.</span><span class="n">initialization</span>
@@ -1703,13 +1750,15 @@
 <span class="sd">            )</span>
 <span class="sd">        """</span>
         <span class="n">no_wd_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'feature_tokenizer'</span><span class="p">,</span> <span class="s1">'normalization'</span><span class="p">,</span> <span class="s1">'.bias'</span><span class="p">]</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no_wd_names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="kc">None</span><span class="p">),</span> <span class="n">FeatureTokenizer</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no_wd_names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="kc">None</span><span class="p">),</span> <span class="n">FeatureTokenizer</span>
+        <span class="p">),</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
         <span class="k">assert</span> <span class="p">(</span>
             <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">named_modules</span><span class="p">()</span> <span class="k">if</span> <span class="n">no_wd_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">name</span><span class="p">)</span>
             <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformer</span><span class="o">.</span><span class="n">blocks</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
             <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'attention_normalization'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformer</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># type: ignore</span>
             <span class="o">+</span> <span class="mi">1</span>
-        <span class="p">)</span>
+        <span class="p">),</span> <span class="n">_INTERNAL_ERROR_MESSAGE</span>
 
         <span class="k">def</span> <span class="nf">needs_wd</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
             <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">name</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">no_wd_names</span><span class="p">)</span>
