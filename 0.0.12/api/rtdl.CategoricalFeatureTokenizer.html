@@ -48,7 +48,7 @@
   
   
   
-    <title>rtdl.FeatureTokenizer &#8212; rtdl 0.0.11 documentation</title>
+    <title>rtdl.CategoricalFeatureTokenizer &#8212; rtdl 0.0.12 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/material.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -61,8 +61,8 @@
     <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="rtdl.CLSToken" href="rtdl.CLSToken.html" />
-    <link rel="prev" title="rtdl.CategoricalFeatureTokenizer" href="rtdl.CategoricalFeatureTokenizer.html" />
+    <link rel="next" title="rtdl.FeatureTokenizer" href="rtdl.FeatureTokenizer.html" />
+    <link rel="prev" title="rtdl.NumericalFeatureTokenizer" href="rtdl.NumericalFeatureTokenizer.html" />
   
    
 
@@ -81,12 +81,12 @@
   <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
   <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
   <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-  <a href="#api/rtdl.FeatureTokenizer" tabindex="1" class="md-skip"> Skip to content </a>
+  <a href="#api/rtdl.CategoricalFeatureTokenizer" tabindex="1" class="md-skip"> Skip to content </a>
   <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../index.html" title="rtdl 0.0.11 documentation"
+        <a href="../index.html" title="rtdl 0.0.12 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#127968;</i>
@@ -98,8 +98,8 @@
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          <span class="md-header-nav__topic">rtdl 0.0.11</span>
-          <span class="md-header-nav__topic"> rtdl.FeatureTokenizer </span>
+          <span class="md-header-nav__topic">rtdl 0.0.12</span>
+          <span class="md-header-nav__topic"> rtdl.CategoricalFeatureTokenizer </span>
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -184,13 +184,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../index.html" title="rtdl 0.0.11 documentation" class="md-nav__button md-logo">
+    <a href="../index.html" title="rtdl 0.0.12 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#127968;</i>
       
     </a>
     <a href="../index.html"
-       title="rtdl 0.0.11 documentation">rtdl 0.0.11</a>
+       title="rtdl 0.0.12 documentation">rtdl 0.0.12</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/Yura52/rtdl" title="Go to repository" class="md-source" data-md-source="github">
@@ -286,7 +286,7 @@
 <nav class="md-nav md-nav--secondary">
   <ul class="md-nav__list" data-md-scrollfix="">
     
-<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/api/rtdl.FeatureTokenizer.rst.txt">Show Source</a> </li>
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/api/rtdl.CategoricalFeatureTokenizer.rst.txt">Show Source</a> </li>
 
 <li id="searchbox" class="md-nav__item"></li>
 
@@ -299,78 +299,65 @@
         <div class="md-content">
           <article class="md-content__inner md-typeset" role="main">
             
-  <section id="rtdl-featuretokenizer">
-<h1 id="api-rtdl-featuretokenizer--page-root">rtdl.FeatureTokenizer<a class="headerlink" href="#api-rtdl-featuretokenizer--page-root" title="Permalink to this headline">¶</a></h1>
+  <section id="rtdl-categoricalfeaturetokenizer">
+<h1 id="api-rtdl-categoricalfeaturetokenizer--page-root">rtdl.CategoricalFeatureTokenizer<a class="headerlink" href="#api-rtdl-categoricalfeaturetokenizer--page-root" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="rtdl.FeatureTokenizer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">rtdl.</span></span><span class="sig-name descname"><span class="pre">FeatureTokenizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_num_features</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_cardinalities</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/rtdl/modules.html#FeatureTokenizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rtdl.FeatureTokenizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Combines <a class="reference internal" href="rtdl.NumericalFeatureTokenizer.html#rtdl.NumericalFeatureTokenizer" title="rtdl.NumericalFeatureTokenizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumericalFeatureTokenizer</span></code></a> and <a class="reference internal" href="rtdl.CategoricalFeatureTokenizer.html#rtdl.CategoricalFeatureTokenizer" title="rtdl.CategoricalFeatureTokenizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CategoricalFeatureTokenizer</span></code></a>.</p>
-<p>The “Feature Tokenizer” module from [gorishniy2021revisiting]. The module transforms
-continuous and categorical features to tokens (embeddings).</p>
-<p>In the illustration below, the red module in the upper brackets represents
-<a class="reference internal" href="rtdl.NumericalFeatureTokenizer.html#rtdl.NumericalFeatureTokenizer" title="rtdl.NumericalFeatureTokenizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumericalFeatureTokenizer</span></code></a> and the green module in the lower brackets represents
-<a class="reference internal" href="rtdl.CategoricalFeatureTokenizer.html#rtdl.CategoricalFeatureTokenizer" title="rtdl.CategoricalFeatureTokenizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CategoricalFeatureTokenizer</span></code></a>.</p>
-<a class="reference internal image-reference" href="../_images/feature_tokenizer.png"><img alt="Feature Tokenizer" src="../_images/feature_tokenizer.png" style="width: 516.12px; height: 386.1px;"/></a>
+<dt class="sig sig-object py" id="rtdl.CategoricalFeatureTokenizer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">rtdl.</span></span><span class="sig-name descname"><span class="pre">CategoricalFeatureTokenizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cardinalities</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialization</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/rtdl/modules.html#CategoricalFeatureTokenizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rtdl.CategoricalFeatureTokenizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms categorical features to tokens (embeddings).</p>
+<p>See <a class="reference internal" href="rtdl.FeatureTokenizer.html#rtdl.FeatureTokenizer" title="rtdl.FeatureTokenizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeatureTokenizer</span></code></a> for the illustration.</p>
+<p>The module efficiently implements a collection of <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html#torch.nn.Embedding" title="(in PyTorch v1.11.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">torch.nn.Embedding</span></code></a> (with
+optional biases).</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_objects</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">n_num_features</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">n_cat_features</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">d_token</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">x_num</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_objects</span><span class="p">,</span> <span class="n">n_num_features</span><span class="p">)</span>
-<span class="n">x_cat</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-<span class="c1"># [2, 3] reflects cardinalities fr</span>
-<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">FeatureTokenizer</span><span class="p">(</span><span class="n">n_num_features</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">d_token</span><span class="p">)</span>
-<span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">(</span><span class="n">x_num</span><span class="p">,</span> <span class="n">x_cat</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">tokens</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="n">n_objects</span><span class="p">,</span> <span class="n">n_num_features</span> <span class="o">+</span> <span class="n">n_cat_features</span><span class="p">,</span> <span class="n">d_token</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the input must contain integers. For example, if the first feature can</span>
+<span class="c1"># take 3 distinct values, then its cardinality is 3 and the first column</span>
+<span class="c1"># must contain values from the range `[0, 1, 2]`.</span>
+<span class="n">cardinalities</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="p">])</span>
+<span class="n">n_objects</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">d_token</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">CategoricalFeatureTokenizer</span><span class="p">(</span><span class="n">cardinalities</span><span class="p">,</span> <span class="n">d_token</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'uniform'</span><span class="p">)</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">tokens</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="n">n_objects</span><span class="p">,</span> <span class="n">n_features</span><span class="p">,</span> <span class="n">d_token</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="rubric">References</p>
-<ul class="simple">
-<li><p>[gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko “Revisiting Deep Learning Models for Tabular Data”, 2021</p></li>
-</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n_num_features</strong> – the number of continuous features. Pass <code class="code docutils literal notranslate"><span class="pre">0</span></code> if there
-are no numerical features.</p></li>
-<li><p><strong>cat_cardinalities</strong> – the number of unique values for each feature. See
-<a class="reference internal" href="rtdl.CategoricalFeatureTokenizer.html#rtdl.CategoricalFeatureTokenizer" title="rtdl.CategoricalFeatureTokenizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CategoricalFeatureTokenizer</span></code></a> for details. Pass an empty list if there
-are no categorical features.</p></li>
+<li><p><strong>cardinalities</strong> – the number of distinct values for each feature. For example,
+<code class="code docutils literal notranslate"><span class="pre">cardinalities=[3,</span> <span class="pre">4]</span></code> describes two features: the first one can
+take values in the range <code class="code docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2]</span></code> and the second one can take
+values in the range <code class="code docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code>.</p></li>
 <li><p><strong>d_token</strong> – the size of one token.</p></li>
+<li><p><strong>bias</strong> – if <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, for each feature, a trainable vector is added to the
+embedding regardless of feature value. The bias vectors are not shared
+between features.</p></li>
+<li><p><strong>initialization</strong> – initialization policy for parameters. Must be one of
+<code class="code docutils literal notranslate"><span class="pre">['uniform',</span> <span class="pre">'normal']</span></code>. Let <code class="code docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">d</span> <span class="pre">**</span> <span class="pre">-0.5</span></code>. Then, the
+corresponding distributions are <code class="code docutils literal notranslate"><span class="pre">Uniform(-s,</span> <span class="pre">s)</span></code> and <code class="code docutils literal notranslate"><span class="pre">Normal(0,</span> <span class="pre">s)</span></code>. In
+the paper [gorishniy2021revisiting], the ‘uniform’ initialization was
+used.</p></li>
 </ul>
 </dd>
 </dl>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p>[gorishniy2021revisiting] Yury Gorishniy, Ivan Rubachev, Valentin Khrulkov, Artem Babenko, “Revisiting Deep Learning Models for Tabular Data”, 2021</p></li>
+</ul>
 <dl class="py property">
-<dt class="sig sig-object py" id="rtdl.FeatureTokenizer.n_tokens">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_tokens</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#rtdl.FeatureTokenizer.n_tokens" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rtdl.CategoricalFeatureTokenizer.n_tokens">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_tokens</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#rtdl.CategoricalFeatureTokenizer.n_tokens" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of tokens.</p>
 </dd></dl>
 <dl class="py property">
-<dt class="sig sig-object py" id="rtdl.FeatureTokenizer.d_token">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">d_token</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#rtdl.FeatureTokenizer.d_token" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="rtdl.CategoricalFeatureTokenizer.d_token">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">d_token</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#rtdl.CategoricalFeatureTokenizer.d_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>The size of one token.</p>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="rtdl.FeatureTokenizer.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_num</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.11.0)"><span class="pre">torch.Tensor</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_cat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.11.0)"><span class="pre">torch.Tensor</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.11.0)"><span class="pre">torch.Tensor</span></a></span></span><a class="reference internal" href="../_modules/rtdl/modules.html#FeatureTokenizer.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rtdl.FeatureTokenizer.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform the forward pass.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x_num</strong> – continuous features. Must be presented if <code class="code docutils literal notranslate"><span class="pre">n_num_features</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>
-was passed to the constructor.</p></li>
-<li><p><strong>x_cat</strong> – categorical features (see <code class="xref py py-obj docutils literal notranslate"><span class="pre">CategoricalFeatureTokenizer.forward</span></code> for
-details). Must be presented if non-empty <code class="code docutils literal notranslate"><span class="pre">cat_cardinalities</span></code> was
-passed to the constructor.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>tokens</p>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AssertionError" title="(in Python v3.10)"><strong>AssertionError</strong></a> – if the described requirements for the inputs are not met.</p>
-</dd>
-</dl>
 </dd></dl>
 </dd></dl>
 </section>
