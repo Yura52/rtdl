@@ -1,0 +1,7 @@
+﻿rtdl.CategoricalFeatureTokenizer
+================================
+
+.. currentmodule:: rtdl
+
+.. autoclass:: CategoricalFeatureTokenizer
+   :members:

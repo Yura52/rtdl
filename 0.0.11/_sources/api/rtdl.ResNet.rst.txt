@@ -1,0 +1,7 @@
+﻿rtdl.ResNet
+===========
+
+.. currentmodule:: rtdl
+
+.. autoclass:: ResNet
+   :members:

@@ -1,0 +1,7 @@
+﻿rtdl.Transformer
+================
+
+.. currentmodule:: rtdl
+
+.. autoclass:: Transformer
+   :members:
