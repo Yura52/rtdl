@@ -1,0 +1,7 @@
+﻿rtdl.FTTransformer
+==================
+
+.. currentmodule:: rtdl
+
+.. autoclass:: FTTransformer
+   :members:

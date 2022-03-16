@@ -1,0 +1,7 @@
+﻿rtdl.GEGLU
+==========
+
+.. currentmodule:: rtdl
+
+.. autoclass:: GEGLU
+   :members:

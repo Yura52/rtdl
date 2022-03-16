@@ -1,0 +1,7 @@
+﻿rtdl.NumericalFeatureTokenizer
+==============================
+
+.. currentmodule:: rtdl
+
+.. autoclass:: NumericalFeatureTokenizer
+   :members:
